@@ -31,8 +31,6 @@ if __name__ == "__main__":
     char2 = Fi()
     char3 = BB()
     char4 = RM()
-
-
     listchar = [char1, char2, char3, char4] 
 
     gaming = True
