@@ -6,6 +6,31 @@ class FFRclasses:
         self.equip = {}
         self.canequip = {}
 
+class WhiteWizard(WhiteMage):
+    def __init__(self):
+        super().__init__()
+        self.canequip["Weapons"]["Hammers"].append("Thor")
+        self.canequip["Armors"]["Armor"].append("White Shrit")
+
+class WhiteMage(FFRclasses):
+    def __init__(self):
+        self.equip = {}
+        self.canequip = {
+                        "Armory" : {
+                                    "Armors" : ["Cloth"],
+                                    "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
+                                    "Shields" : ["Procape"],
+                                    "Helmets" : ["Cap", "Ribbon"],
+                                    "Gauntlets" : ["Gloves", "ProRing"]
+                                    },
+                        "Weapons": {"Swords" : None,
+                                    "Axes" : None,
+                                    "Daggers" : None,
+                                    "Staffs" : ["Wooden","Power", "Heal"],
+                                    "Hammers" : ["Iron", "Silver"],
+                                    "Nunchucks" : None,
+                                    "Others" : ["Masmune"]},
+                        }
 
 class Thief(FFRclasses):
     def __init__(self):
@@ -30,6 +55,8 @@ class Thief(FFRclasses):
 class Ninja(Thief):
     def __init__(self):
         pass #FIXME
+        # http://mikesrpgcenter.com/ffantasy/armor.html
+        # http://mikesrpgcenter.com/ffantasy/weapons.html
 class Fighter(FFRclasses):
     def __init__(self):
         self.equip = {}
@@ -52,6 +79,7 @@ class Fighter(FFRclasses):
 class Knight(Fighter):
     def __init__(self):
         super().__init__()
+        # Armors TODO
         self.canequip["Weapons"]["Swords"].append("Bane")
         self.canequip["Weapons"]["Hammer"].append("Thor")
         self.canequip["Weapons"]["Others"] = ["Rapier", "Scimtar", "Sabre", "Falchon","Vorpal", "Catclaw", "Defense","Xcalber", "Masmune"]
