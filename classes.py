@@ -7,6 +7,32 @@ class FFRclasses:
         self.canequip = {}
         raise FFRError("You cannot create an unamed class")
 
+class BlackBelt(FFRclasses):
+    def __init__(self):
+        self.equip = {}
+        self.canequip = {
+                        "Armory" : {
+                                    "Armors" : ["Cloth", "Wooden"],
+                                    "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
+                                    "Shields" : None,
+                                    "Helmets" : ["Cap", "Ribbon"],
+                                    "Gauntlets" : ["Gloves", "ProRing"]
+                                    },
+                        "Weapons": {"Swords" : None,
+                                    "Axes" : None,
+                                    "Daggers" : None,
+                                    "Staffs" : ["Wooden", "Power"],
+                                    "Hammers" : None,
+                                    "Nunchucks" : ["Wooden", "Iron"],
+                                    "Others" : ["Masmune"]}
+                        }
+
+class Master(BlackBelt):
+    def __init__(self):
+        super().__init__()
+        self.canequip["Weapons"]["Staffs"].append("Iron")
+
+
 class RedMage(FFRclasses):
         def __init__(self):
             self.equip = {}
@@ -27,7 +53,6 @@ class RedMage(FFRclasses):
                                         "Nunchucks" : None,
                                         "Others" : ["Rapier", "Scimtar", "Sabre", "Falchon", "Masmune"]},
                             }
-
 class RedWizard(RedMage):
     def __init__(self):
         super().__init__()
