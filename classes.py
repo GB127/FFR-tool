@@ -13,23 +13,33 @@ class RedMage(FFRclasses):
 
             self.canequip = {
                             "Armory" : {
-                                        "Armors" : ["Cloth"],
+                                        "Armors" : ["Cloth", "Wooden", "Chain", "Silver"],
                                         "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
-                                        "Shields" : ["ProCape"],
+                                        "Shields" : ["Buckler"],
                                         "Helmets" : ["Cap", "Ribbon"],
                                         "Gauntlets" : ["Gloves", "ProRing"]
                                         },
-                            "Weapons": {"Swords" : [],
+                            "Weapons": {"Swords" : ["Short", "Rune", "Dragon", "Coral", "Long", "Silver", "Giant", "Flame", "Ice", "Sun"],
                                         "Axes" : None,
                                         "Daggers" : ["Small", "Large", "Silver"],
-                                        "Staffs" : ["Wooden", "Power", "Mage"],
+                                        "Staffs" : ["Wooden"],
                                         "Hammers" : None,
                                         "Nunchucks" : None,
-                                        "Others" : ["Masmune"]},
+                                        "Others" : ["Rapier", "Scimtar", "Sabre", "Falchon", "Masmune"]},
                             }
 
-
-
+class RedWizard(RedMage):
+    def __init__(self):
+        super().__init__()
+        self.canequip["Armory"]["Shields"].append("ProCape")
+        self.canequip["Armory"]["Gauntlets"].append("Silver")
+        self.canequip["Armory"]["Gauntlets"].append("Zeus")
+        self.canequip["Armory"]["Gauntlets"].append("Power")
+        self.canequip["Weapons"]["Swords"].append("Were")
+        self.canequip["Weapons"]["Swords"].append("Bane")
+        self.canequip["Weapons"]["Others"].append("Vorpal")
+        self.canequip["Weapons"]["Others"].append("Catclaw")
+        self.canequip["Weapons"]["Others"].append("Defense")
 
 class BlackMage(FFRclasses):
     def __init__(self):
