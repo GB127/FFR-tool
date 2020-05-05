@@ -27,8 +27,8 @@ class weapon:
         return f"{self.cat:<12}| " + f"{self.name:<10}|" + f"{str(self.D):^4}|" + f"{str(self.H):^4}|"
 
     def __lt__(self, other):
-        if self.cat < other.cat : return True
-        elif self.name < other.name : return True
+        if self.cat != other.cat : return self.cat < other.cat
+        else: return self.name < other.name
 
     def isbetter(self,other):
         if self.D < other.D:
