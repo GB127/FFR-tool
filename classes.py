@@ -6,57 +6,6 @@ class FFRclasses:
         self.equip = {}
         self.canequip = {}
 
-class WhiteWizard(WhiteMage):
-    def __init__(self):
-        super().__init__()
-        self.canequip["Weapons"]["Hammers"].append("Thor")
-        self.canequip["Armors"]["Armor"].append("White Shrit")
-
-class WhiteMage(FFRclasses):
-    def __init__(self):
-        self.equip = {}
-        self.canequip = {
-                        "Armory" : {
-                                    "Armors" : ["Cloth"],
-                                    "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
-                                    "Shields" : ["Procape"],
-                                    "Helmets" : ["Cap", "Ribbon"],
-                                    "Gauntlets" : ["Gloves", "ProRing"]
-                                    },
-                        "Weapons": {"Swords" : None,
-                                    "Axes" : None,
-                                    "Daggers" : None,
-                                    "Staffs" : ["Wooden","Power", "Heal"],
-                                    "Hammers" : ["Iron", "Silver"],
-                                    "Nunchucks" : None,
-                                    "Others" : ["Masmune"]},
-                        }
-
-class Thief(FFRclasses):
-    def __init__(self):
-        self.equip = {}
-        self.canequip = {
-                        "Armory" : {
-                                    "Armors" : ["Cloth", "Wooden"],
-                                    "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
-                                    "Shields" : ["Buckler", "Procape"],
-                                    "Helmets" : ["Cap", "Ribbon"],
-                                    "Gauntlets" : ["Gloves", "ProRing"]
-                                    },
-                        "Weapons": {"Swords" : ["Rune", "Dragon", "Coral"],
-                                    "Axes" : None,
-                                    "Daggers" : ["Small", "Large", "Silver"],
-                                    "Staffs" : None,
-                                    "Hammers" : None,
-                                    "Nunchucks" : None,
-                                    "Others" : ["Rapier", "Scimtar", "Sabre", "Falchon", "Masmune"]},
-                        }
-
-class Ninja(Thief):
-    def __init__(self):
-        pass #FIXME
-        # http://mikesrpgcenter.com/ffantasy/armor.html
-        # http://mikesrpgcenter.com/ffantasy/weapons.html
 class Fighter(FFRclasses):
     def __init__(self):
         self.equip = {}
@@ -84,6 +33,32 @@ class Knight(Fighter):
         self.canequip["Weapons"]["Hammer"].append("Thor")
         self.canequip["Weapons"]["Others"] = ["Rapier", "Scimtar", "Sabre", "Falchon","Vorpal", "Catclaw", "Defense","Xcalber", "Masmune"]
 
+class Thief(FFRclasses):
+    def __init__(self):
+        self.equip = {}
+        self.canequip = {
+                        "Armory" : {
+                                    "Armors" : ["Cloth", "Wooden"],
+                                    "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
+                                    "Shields" : ["Buckler", "Procape"],
+                                    "Helmets" : ["Cap", "Ribbon"],
+                                    "Gauntlets" : ["Gloves", "ProRing"]
+                                    },
+                        "Weapons": {"Swords" : ["Rune", "Dragon", "Coral"],
+                                    "Axes" : None,
+                                    "Daggers" : ["Small", "Large", "Silver"],
+                                    "Staffs" : None,
+                                    "Hammers" : None,
+                                    "Nunchucks" : None,
+                                    "Others" : ["Rapier", "Scimtar", "Sabre", "Falchon", "Masmune"]},
+                        }
+
+class Ninja(Thief):
+    def __init__(self):
+        pass #FIXME
+        # http://mikesrpgcenter.com/ffantasy/armor.html
+        # http://mikesrpgcenter.com/ffantasy/weapons.html
+
 class BlackBelt(FFRclasses):
     def __init__(self):
         self.equip = {}
@@ -107,8 +82,53 @@ class Master(BlackBelt):
     def __init__(self):
         super().__init__()
         self.canequip["Weapons"]["Staffs"].append("Iron")
+class WhiteMage(FFRclasses):
+    def __init__(self):
+        self.equip = {}
+        self.canequip = {
+                        "Armory" : {
+                                    "Armors" : ["Cloth"],
+                                    "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
+                                    "Shields" : ["Procape"],
+                                    "Helmets" : ["Cap", "Ribbon"],
+                                    "Gauntlets" : ["Gloves", "ProRing"]
+                                    },
+                        "Weapons": {"Swords" : None,
+                                    "Axes" : None,
+                                    "Daggers" : None,
+                                    "Staffs" : ["Wooden","Power", "Heal"],
+                                    "Hammers" : ["Iron", "Silver"],
+                                    "Nunchucks" : None,
+                                    "Others" : ["Masmune"]},
+                        }
 
+class WhiteWizard(WhiteMage):
+    def __init__(self):
+        super().__init__()
+        self.canequip["Weapons"]["Hammers"].append("Thor")
+        self.canequip["Armors"]["Armor"].append("White Shrit")
 
+class BlackMage(FFRclasses):
+    def __init__(self):
+        self.equip = {}
+
+        self.canequip = {
+            "Armory" : {
+                        "Armors" : ["Cloth"],
+                        "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
+                        "Shields" : ["ProCape"],
+                        "Helmets" : ["Cap", "Ribbon"],
+                        "Gauntlets" : ["Gloves", "ProRing"]
+                        },
+            "Weapons": {"Swords" : None,
+                        "Axes" : None,
+                        "Daggers" : ["Small", "Large", "Silver"],
+                        "Staffs" : ["Wooden", "Power", "Mage"],
+                        "Hammers" : None,
+                        "Nunchucks" : None,
+                        "Others" : ["Masmune"]},
+            }
+class BlackWizard(BlackMage):
 class RedMage(FFRclasses):
         def __init__(self):
             self.equip = {}
@@ -142,27 +162,7 @@ class RedWizard(RedMage):
         self.canequip["Weapons"]["Others"].append("Catclaw")
         self.canequip["Weapons"]["Others"].append("Defense")
 
-class BlackMage(FFRclasses):
-    def __init__(self):
-        self.equip = {}
 
-        self.canequip = {
-            "Armory" : {
-                        "Armors" : ["Cloth"],
-                        "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
-                        "Shields" : ["ProCape"],
-                        "Helmets" : ["Cap", "Ribbon"],
-                        "Gauntlets" : ["Gloves", "ProRing"]
-                        },
-            "Weapons": {"Swords" : None,
-                        "Axes" : None,
-                        "Daggers" : ["Small", "Large", "Silver"],
-                        "Staffs" : ["Wooden", "Power", "Mage"],
-                        "Hammers" : None,
-                        "Nunchucks" : None,
-                        "Others" : ["Masmune"]},
-            }
-class BlackWizard(BlackMage):
     def __init__(self):
         super().__init__()
         self.canequip["Armory"]["Armors"].append("Blck Shrt")
