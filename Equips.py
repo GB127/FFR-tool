@@ -8,7 +8,10 @@ class armor:
         return " ".join([self.cat, self.name, str(self.A), str(self.E)])
 
     def __lt__(self, other):
-        if self.cat < other.cat : return True
+        print(self.cat, other.cat)
+        if self.cat < other.cat :
+            print("comparaison marche")
+            return True
         elif self.name < other.name : return True
 
     def isbetter(self,other):
@@ -16,6 +19,7 @@ class armor:
             return True
         elif self.A > other.A:
             return False
+
 class weapon:
     def __init__(self,cat, name, D, H):
         self.cat = cat
