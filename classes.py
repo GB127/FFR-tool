@@ -7,9 +7,11 @@ class FFRclasses:
         self.canequip = {}
         self.acro = "XX"
 
-    def checkequip(self,WA,cat,name):
+    def checkequip(self,WA,cat,name, string=False):
         if name in self.canequip[WA][cat]: return "X"
-        else : return "-"
+        else : 
+            if string: return "-"
+            return False
     def getacro(self):
         return self.acro
 

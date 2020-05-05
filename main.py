@@ -25,15 +25,11 @@ acrodicto = {"FI" : Fi, "KN" : Kn, "BB" : BB, "MA" : Ma, "TH" : Th, "NI" : Ni,
 if __name__ == "__main__":
     clear()  # Note that this removes the ability to check if ran on the correct place
     print("Fi/Kn, BB/Ma, Th/Nin, RM/RW, WM/WW, BM/BW")
-    #char1 = acrodicto[input("What is your 1st class? ").upper()]()
-    #char2 = acrodicto[input("What is your 2nd class? ").upper()]()
-    #char3 = acrodicto[input("What is your 3rd class? ").upper()]()
-    #char4 = acrodicto[input("What is your 4th class? ").upper()]()
-    char1 = BM()
-    char2 = Fi()
-    char3 = BB()
-    char4 = RM()
-    listchar = [char1, char2, char3, char4] 
+    char1 = acrodicto[input("What is your 1st class? ").upper()]()
+    char2 = acrodicto[input("What is your 2nd class? ").upper()]()
+    char3 = acrodicto[input("What is your 3rd class? ").upper()]()
+    char4 = acrodicto[input("What is your 4th class? ").upper()]()
+    listchar = [char1, char2, char3, char4]
 
     gaming = True
     while gaming :
@@ -49,7 +45,7 @@ if __name__ == "__main__":
                     listcan.append(armor)
             listcan.sort()
             for i in listcan:
-                line = str(i) + f"{char1.checkequip('Armory', i.cat, i.name):^3}|"  + f"{char2.checkequip('Armory', i.cat, i.name):^3}|"  + f"{char3.checkequip('Armory', i.cat, i.name):^3}|"  + f"{char4.checkequip('Armory', i.cat, i.name):^3}|"
+                line = str(i) + f"{char1.checkequip('Armory', i.cat, i.name, True):^3}|"  + f"{char2.checkequip('Armory', i.cat, i.name, True):^3}|"  + f"{char3.checkequip('Armory', i.cat, i.name, True):^3}|"  + f"{char4.checkequip('Armory', i.cat, i.name, True):^3}|"
                 print(line)
             print("-" * 50)
         elif command == "LW":
@@ -63,7 +59,7 @@ if __name__ == "__main__":
                     listcan.append(weapon)
             listcan.sort()
             for i in listcan:
-                line = str(i) + f"{char1.checkequip('Weapons', i.cat, i.name):^3}|"  + f"{char2.checkequip('Weapons', i.cat, i.name):^3}|"  + f"{char3.checkequip('Weapons', i.cat, i.name):^3}|"  + f"{char4.checkequip('Weapons', i.cat, i.name):^3}|"
+                line = str(i) + f"{char1.checkequip('Weapons', i.cat, i.name, True):^3}|"  + f"{char2.checkequip('Weapons', i.cat, i.name, True):^3}|"  + f"{char3.checkequip('Weapons', i.cat, i.name, True):^3}|"  + f"{char4.checkequip('Weapons', i.cat, i.name, True):^3}|"
                 print(line)
 
         elif command == "END":
