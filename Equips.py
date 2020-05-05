@@ -5,7 +5,7 @@ class armor:
         self.A = A
         self.E = E
     def __str__(self):
-        return " ".join([self.cat, self.name, str(self.A), str(self.E)])
+        return f"{self.cat:<12}| " + f"{self.name:<10}|" + f"{str(self.A):^4}|" + f"{str(self.E):^4}|"
 
     def __lt__(self, other):
         print(self.cat, other.cat)
@@ -27,7 +27,7 @@ class weapon:
         self.H = H
         self.D = D
     def __str__(self):
-        return " ".join([self.cat, self.name, str(self.H), str(self.D)])
+        return f"{self.cat:<12}| " + f"{self.name:<10}|" + f"{str(self.D):^4}|" + f"{str(self.H):^4}|"
 
     def __lt__(self, other):
         if self.cat < other.cat : return True
@@ -40,9 +40,6 @@ class weapon:
             return False
         elif self.H < other.H:
             return True
-
-
-
 
 listarmors = [
     armor("Armors","Cloth",1,-2),
@@ -134,3 +131,11 @@ listweapons = [
     weapon("Others","Katana",33,35),
     weapon("Others","Xcalber",45,35),
     weapon("Others","Masmune",56,50)]
+
+
+
+if __name__ == "__main__":
+    test = armor("Swords", "Shorts", 50, 60)
+    print(test)
+    testw = weapon("Cool", "this",4,6)
+    print(testw)

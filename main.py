@@ -6,7 +6,7 @@ from classes import FFRclasses,\
     WhiteMage, WhiteWizard,\
     BlackMage, BlackWizard
 import os
-from Equips import weapon, listweapons  # this works
+from Equips import weapon, listweapons, armor, listarmors  # this works
 clear = lambda: os.system('cls')
 clear()
 
@@ -24,18 +24,33 @@ if __name__ == "__main__":
     clear()  # Note that this removes the ability to check if ran on the correct place
     print("Fi/Kn, BB/Ma, Th/Nin, RM/RW, WM/WW, BM/BW")
     # FIXME : This works, so I commented out
-    """
     char1 = acrodicto[input("What is your 1st class? ").upper()]()
     char2 = acrodicto[input("What is your 2nd class? ").upper()]()
     char3 = acrodicto[input("What is your 3rd class? ").upper()]()
     char4 = acrodicto[input("What is your 4th class? ").upper()]()
-    """
-    test = Fighter()
-    listchar = [test]  # ok
-    printlist = []
-    for weapon in listweapons :
-        if any([test.checkequip("Weapons", weapon.cat, weapon.name) for i in listchar]):
-            printlist.append(weapon)
-    printlist.sort()
-    for i in printlist: print(i)
+    
+    listchar = [char1, char2, char3, char4] 
+
+    gaming = True
+    while gaming :
+        print("END = End the game, LA = List Armor, LW = List Weapons")
+        command = input("What would you like to do? ").upper()
+        if command == "LA":
+            clear()
+            listcan = []
+            for armor in listarmors :
+                if any([i.checkequip("Armory", armor.cat, armor.name) for i in listchar]):
+                    listcan.append(armor)
+            for i in listcan: print(i)
+        elif command == "LW":
+            clear()
+            listcan = []
+            for weapon in listweapons :
+                if any([i.checkequip("Weapons", weapon.cat, weapon.name) for i in listchar]):
+                    listcan.append(weapon)
+            for i in listcan: print(i)
+        elif command == "END":
+            gaming = None
+
+
 
