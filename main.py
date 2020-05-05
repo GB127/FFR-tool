@@ -47,7 +47,8 @@ if __name__ == "__main__":
             for armor in listarmors :
                 if any([i.checkequip("Armory", armor.cat, armor.name) for i in listchar]):
                     listcan.append(armor)
-            for i in listcan: 
+            listcan.sort()
+            for i in listcan:
                 line = str(i) + f"{char1.checkequip('Armory', i.cat, i.name):^3}|"  + f"{char2.checkequip('Armory', i.cat, i.name):^3}|"  + f"{char3.checkequip('Armory', i.cat, i.name):^3}|"  + f"{char4.checkequip('Armory', i.cat, i.name):^3}|"
                 print(line)
             print("-" * 50)
@@ -60,7 +61,11 @@ if __name__ == "__main__":
             for weapon in listweapons :
                 if any([i.checkequip("Weapons", weapon.cat, weapon.name) for i in listchar]):
                     listcan.append(weapon)
-            for i in listcan: print(i)
+            listcan.sort()
+            for i in listcan:
+                line = str(i) + f"{char1.checkequip('Weapons', i.cat, i.name):^3}|"  + f"{char2.checkequip('Weapons', i.cat, i.name):^3}|"  + f"{char3.checkequip('Weapons', i.cat, i.name):^3}|"  + f"{char4.checkequip('Weapons', i.cat, i.name):^3}|"
+                print(line)
+
         elif command == "END":
             gaming = None
 
