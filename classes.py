@@ -25,7 +25,7 @@ class Fighter(FFRclasses):
                                     "Daggers" : ["Small", "Large", "Silver"],
                                     "Staffs" : ["Wooden","Power", "Iron"],
                                     "Hammers" : ["Iron", "Silver"],
-                                    "Nunchucks" : None,
+                                    "Nunchucks" : [],
                                     "Others" : ["Rapier", "Scimtar", "Sabre", "Falchon", "Masmune"]},
                         }
 class Knight(Fighter):
@@ -48,11 +48,11 @@ class Thief(FFRclasses):
                                     "Gauntlets" : ["Gloves", "ProRing"]
                                     },
                         "Weapons": {"Swords" : ["Rune", "Dragon", "Coral"],
-                                    "Axes" : None,
+                                    "Axes" : [],
                                     "Daggers" : ["Small", "Large", "Silver"],
-                                    "Staffs" : None,
-                                    "Hammers" : None,
-                                    "Nunchucks" : None,
+                                    "Staffs" : [],
+                                    "Hammers" : [],
+                                    "Nunchucks" : [],
                                     "Others" : ["Rapier", "Scimtar", "Sabre", "Falchon", "Masmune"]},
                         }
 
@@ -69,15 +69,15 @@ class BlackBelt(FFRclasses):
                         "Armory" : {
                                     "Armors" : ["Cloth", "Wooden"],
                                     "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
-                                    "Shields" : None,
+                                    "Shields" : [],
                                     "Helmets" : ["Cap", "Ribbon"],
                                     "Gauntlets" : ["Gloves", "ProRing"]
                                     },
-                        "Weapons": {"Swords" : None,
-                                    "Axes" : None,
-                                    "Daggers" : None,
+                        "Weapons": {"Swords" : [],
+                                    "Axes" : [],
+                                    "Daggers" : [],
                                     "Staffs" : ["Wooden", "Power"],
-                                    "Hammers" : None,
+                                    "Hammers" : [],
                                     "Nunchucks" : ["Wooden", "Iron"],
                                     "Others" : ["Masmune"]}
                         }
@@ -96,12 +96,12 @@ class WhiteMage(FFRclasses):
                                     "Helmets" : ["Cap", "Ribbon"],
                                     "Gauntlets" : ["Gloves", "ProRing"]
                                     },
-                        "Weapons": {"Swords" : None,
-                                    "Axes" : None,
-                                    "Daggers" : None,
+                        "Weapons": {"Swords" : [],
+                                    "Axes" : [],
+                                    "Daggers" : [],
                                     "Staffs" : ["Wooden","Power", "Heal"],
                                     "Hammers" : ["Iron", "Silver"],
-                                    "Nunchucks" : None,
+                                    "Nunchucks" : [],
                                     "Others" : ["Masmune"]},
                         }
 
@@ -123,12 +123,12 @@ class BlackMage(FFRclasses):
                         "Helmets" : ["Cap", "Ribbon"],
                         "Gauntlets" : ["Gloves", "ProRing"]
                         },
-            "Weapons": {"Swords" : None,
-                        "Axes" : None,
+            "Weapons": {"Swords" : [],
+                        "Axes" : [],
                         "Daggers" : ["Small", "Large", "Silver"],
                         "Staffs" : ["Wooden", "Power", "Mage"],
-                        "Hammers" : None,
-                        "Nunchucks" : None,
+                        "Hammers" : [],
+                        "Nunchucks" : [],
                         "Others" : ["Masmune"]},
             }
 class BlackWizard(BlackMage):
@@ -150,11 +150,11 @@ class RedMage(FFRclasses):
                                         "Gauntlets" : ["Gloves", "ProRing"]
                                         },
                             "Weapons": {"Swords" : ["Short", "Rune", "Dragon", "Coral", "Long", "Silver", "Giant", "Flame", "Ice", "Sun"],
-                                        "Axes" : None,
+                                        "Axes" : [],
                                         "Daggers" : ["Small", "Large", "Silver"],
                                         "Staffs" : ["Wooden"],
-                                        "Hammers" : None,
-                                        "Nunchucks" : None,
+                                        "Hammers" : [],
+                                        "Nunchucks" : [],
                                         "Others" : ["Rapier", "Scimtar", "Sabre", "Falchon", "Masmune"]},
                             }
 class RedWizard(RedMage):
