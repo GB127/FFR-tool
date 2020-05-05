@@ -5,10 +5,12 @@ from classes import FFRclasses,\
     RedMage, RedWizard,\
     WhiteMage, WhiteWizard,\
     BlackMage, BlackWizard
-import os
 from Equips import weapon, listweapons, armor, listarmors  # this works
+
+import os
+
+
 clear = lambda: os.system('cls')
-clear()
 
 # Let's list the acronyms so both can be used.
 Fi,Kn, BB, Ma, Th, Ni = Fighter, Knight, BlackBelt, Master, Thief, Ninja
@@ -39,7 +41,7 @@ if __name__ == "__main__":
         command = input("What would you like to do? ").upper()
         if command == "LA":
             clear()
-            print(" " * 34 + f"|{char1.acro:^3}|{char2.acro:^3}|{char3.acro:^3}|{char4.acro:^3}|")
+            print(" " * 24 + "| A  | E  |" + f"{char1.acro:^3}|{char2.acro:^3}|{char3.acro:^3}|{char4.acro:^3}|")
             print("-" * 50)
             listcan = []
             for armor in listarmors :
@@ -51,6 +53,9 @@ if __name__ == "__main__":
             print("-" * 50)
         elif command == "LW":
             clear()
+            print(" " * 24 + "| D  | H  |" + f"{char1.acro:^3}|{char2.acro:^3}|{char3.acro:^3}|{char4.acro:^3}|")
+            print("-" * 50)
+
             listcan = []
             for weapon in listweapons :
                 if any([i.checkequip("Weapons", weapon.cat, weapon.name) for i in listchar]):
