@@ -8,11 +8,8 @@ class armor:
         return f"{self.cat:<12}| " + f"{self.name:<10}|" + f"{str(self.A):^4}|" + f"{str(self.E):^4}|"
 
     def __lt__(self, other):
-        print(self.cat, other.cat)
-        if self.cat < other.cat :
-            print("comparaison marche")
-            return True
-        elif self.name < other.name : return True
+        if self.cat != other.cat : return self.cat < other.cat
+        else: return self.name < other.name
 
     def isbetter(self,other):
         if self.A < other.A:
