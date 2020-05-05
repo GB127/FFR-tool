@@ -5,12 +5,17 @@ class FFRclasses:
     def __init__(self):
         self.equip = {}
         self.canequip = {}
+        self.acro = "XX"
 
     def checkequip(self,WA,cat,name):
-        if name in self.canequip[WA][cat]: return True
+        if name in self.canequip[WA][cat]: return "X"
+        else : return "-"
+    def getacro(self):
+        return self.acro
 
 class Fighter(FFRclasses):
     def __init__(self):
+        self.acro = "Fi"
         self.equip = {}
         self.canequip = {
                         "Armory" : {
@@ -31,6 +36,7 @@ class Fighter(FFRclasses):
 class Knight(Fighter):
     def __init__(self):
         super().__init__()
+        self.acro = "Kn"
         # Armors TODO
         self.canequip["Weapons"]["Swords"].append("Bane")
         self.canequip["Weapons"]["Hammer"].append("Thor")
@@ -39,6 +45,7 @@ class Knight(Fighter):
 class Thief(FFRclasses):
     def __init__(self):
         self.equip = {}
+        self.acro = "Th"
         self.canequip = {
                         "Armory" : {
                                     "Armors" : ["Cloth", "Wooden"],
@@ -58,12 +65,14 @@ class Thief(FFRclasses):
 
 class Ninja(Thief):
     def __init__(self):
+        self.acro = "Ni"
         pass #FIXME
         # http://mikesrpgcenter.com/ffantasy/armor.html
         # http://mikesrpgcenter.com/ffantasy/weapons.html
 
 class BlackBelt(FFRclasses):
     def __init__(self):
+        self.acro = "BB"
         self.equip = {}
         self.canequip = {
                         "Armory" : {
@@ -84,9 +93,11 @@ class BlackBelt(FFRclasses):
 class Master(BlackBelt):
     def __init__(self):
         super().__init__()
+        self.acro = "Ma"
         self.canequip["Weapons"]["Staffs"].append("Iron")
 class WhiteMage(FFRclasses):
     def __init__(self):
+        self.acro = "WM"
         self.equip = {}
         self.canequip = {
                         "Armory" : {
@@ -108,13 +119,14 @@ class WhiteMage(FFRclasses):
 class WhiteWizard(WhiteMage):
     def __init__(self):
         super().__init__()
+        self.acro = "WW"
         self.canequip["Weapons"]["Hammers"].append("Thor")
         self.canequip["Armors"]["Armor"].append("White Shrit")
 
 class BlackMage(FFRclasses):
     def __init__(self):
         self.equip = {}
-
+        self.acro = "BM"
         self.canequip = {
             "Armory" : {
                         "Armors" : ["Cloth"],
@@ -134,13 +146,14 @@ class BlackMage(FFRclasses):
 class BlackWizard(BlackMage):
     def __init__(self):
         super().__init__()
+        self.acro = "BW"
         self.canequip["Armory"]["Armors"].append("Blck Shrt")
         self.canequip["Weapons"]["Staffs"].append("Wizard")
         self.canequip["Weapons"]["Others"].append("Catclaw")
 class RedMage(FFRclasses):
         def __init__(self):
             self.equip = {}
-
+            self.acro = "RM"
             self.canequip = {
                             "Armory" : {
                                         "Armors" : ["Cloth", "Wooden", "Chain", "Silver"],
@@ -160,6 +173,7 @@ class RedMage(FFRclasses):
 class RedWizard(RedMage):
     def __init__(self):
         super().__init__()
+        self.acro = "RW"
         self.canequip["Armory"]["Shields"].append("ProCape")
         self.canequip["Armory"]["Gauntlets"].append("Silver")
         self.canequip["Armory"]["Gauntlets"].append("Zeus")
