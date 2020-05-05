@@ -6,6 +6,9 @@ class FFRclasses:
         self.equip = {}
         self.canequip = {}
 
+    def checkequip(self,WA,cat,name):
+        if name in self.canequip[WA][cat]: return True
+
 class Fighter(FFRclasses):
     def __init__(self):
         self.equip = {}
