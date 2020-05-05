@@ -1,12 +1,38 @@
 class FFRError(BaseException):
-    pass
+    pass  # We'll see
 
 class FFRclasses:
     def __init__(self):
         self.equip = {}
         self.canequip = {}
-        raise FFRError("You cannot create an unamed class")
 
+
+class Fighter(FFRclasses):
+    def __init__(self):
+        self.equip
+        self.canequip = {
+                        "Armory" : {
+                                    "Armors" : ["Cloth", "Wooden", "Chain", "Iron", "Silver", "Steel", "Ice", "Flame"],
+                                    "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
+                                    "Shields" : ["Wooden", "iron", "Silver", "Buckler", "Flame", "Ice", "Procape"],
+                                    "Helmets" : ["Cap", "Wooden", "Iron", "Silver", "Ribbon"],
+                                    "Gauntlets" : ["Gloves", "Cooper", "Iron", "Silver","Power", "ProRing"]
+                                    },
+                        "Weapons": {"Swords" : ["Short","Were", "Rune", "Dragon", "Coral", "Long", "Silver", "Giant", "Flame", "Ice", "Sun"],
+                                    "Axes" : ["Hand", "Great", "Silver", "Light"],
+                                    "Daggers" : ["Small", "Large", "Silver"],
+                                    "Staffs" : ["Wooden","Power", "Iron"],
+                                    "Hammers" : ["Iron", "Silver"],
+                                    "Nunchucks" : None,
+                                    "Others" : ["Rapier", "Scimtar", "Sabre", "Falchon", "Masmune"]},
+                        }
+
+class Knight(Fighter):
+    def __init__(self):
+        super().__init__()
+        self.canequip["Weapons"]["Swords"].append("Bane")
+        self.canequip["Weapons"]["Hammer"].append("Thor")
+        self.canequip["Weapons"]["Others"] = ["Rapier", "Scimtar", "Sabre", "Falchon","Vorpal", "Catclaw", "Defense","Xcalber", "Masmune"]
 class BlackBelt(FFRclasses):
     def __init__(self):
         self.equip = {}
