@@ -7,9 +7,32 @@ class FFRclasses:
         self.canequip = {}
 
 
+class Thief(FFRclasses):
+    def __init__(self):
+        self.equip = {}
+        self.canequip = {
+                        "Armory" : {
+                                    "Armors" : ["Cloth", "Wooden"],
+                                    "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
+                                    "Shields" : ["Buckler", "Procape"],
+                                    "Helmets" : ["Cap", "Ribbon"],
+                                    "Gauntlets" : ["Gloves", "ProRing"]
+                                    },
+                        "Weapons": {"Swords" : ["Rune", "Dragon", "Coral"],
+                                    "Axes" : None,
+                                    "Daggers" : ["Small", "Large", "Silver"],
+                                    "Staffs" : None,
+                                    "Hammers" : None,
+                                    "Nunchucks" : None,
+                                    "Others" : ["Rapier", "Scimtar", "Sabre", "Falchon", "Masmune"]},
+                        }
+
+class Ninja(Thief):
+    def __init__(self):
+        pass #FIXME
 class Fighter(FFRclasses):
     def __init__(self):
-        self.equip
+        self.equip = {}
         self.canequip = {
                         "Armory" : {
                                     "Armors" : ["Cloth", "Wooden", "Chain", "Iron", "Silver", "Steel", "Ice", "Flame"],
@@ -26,13 +49,13 @@ class Fighter(FFRclasses):
                                     "Nunchucks" : None,
                                     "Others" : ["Rapier", "Scimtar", "Sabre", "Falchon", "Masmune"]},
                         }
-
 class Knight(Fighter):
     def __init__(self):
         super().__init__()
         self.canequip["Weapons"]["Swords"].append("Bane")
         self.canequip["Weapons"]["Hammer"].append("Thor")
         self.canequip["Weapons"]["Others"] = ["Rapier", "Scimtar", "Sabre", "Falchon","Vorpal", "Catclaw", "Defense","Xcalber", "Masmune"]
+
 class BlackBelt(FFRclasses):
     def __init__(self):
         self.equip = {}
@@ -52,7 +75,6 @@ class BlackBelt(FFRclasses):
                                     "Nunchucks" : ["Wooden", "Iron"],
                                     "Others" : ["Masmune"]}
                         }
-
 class Master(BlackBelt):
     def __init__(self):
         super().__init__()
