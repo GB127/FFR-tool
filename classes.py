@@ -129,6 +129,11 @@ class BlackMage(FFRclasses):
                         "Others" : ["Masmune"]},
             }
 class BlackWizard(BlackMage):
+    def __init__(self):
+        super().__init__()
+        self.canequip["Armory"]["Armors"].append("Blck Shrt")
+        self.canequip["Weapons"]["Staffs"].append("Wizard")
+        self.canequip["Weapons"]["Others"].append("Catclaw")
 class RedMage(FFRclasses):
         def __init__(self):
             self.equip = {}
@@ -161,10 +166,3 @@ class RedWizard(RedMage):
         self.canequip["Weapons"]["Others"].append("Vorpal")
         self.canequip["Weapons"]["Others"].append("Catclaw")
         self.canequip["Weapons"]["Others"].append("Defense")
-
-
-    def __init__(self):
-        super().__init__()
-        self.canequip["Armory"]["Armors"].append("Blck Shrt")
-        self.canequip["Weapons"]["Staffs"].append("Wizard")
-        self.canequip["Weapons"]["Others"].append("Catclaw")
