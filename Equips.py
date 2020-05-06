@@ -5,17 +5,10 @@ class armor:
         self.A = A
         self.E = E
     def __str__(self):
-        return f"{self.cat:<12}| " + f"{self.name:<10}|" + f"{str(self.A):^4}|" + f"{str(self.E):^4}|"
-
+        return f"{self.cat:<12}|{self.name:<10}|{str(self.A):^4}|{str(self.E):^4}|"
     def __lt__(self, other):
         if self.cat != other.cat : return self.cat < other.cat
         else: return self.name < other.name
-
-    def isbetter(self,other):
-        if self.A < other.A:
-            return True
-        elif self.A > other.A:
-            return False
 
 class weapon:
     def __init__(self,cat, name, D, H):
@@ -24,19 +17,10 @@ class weapon:
         self.H = H
         self.D = D
     def __str__(self):
-        return f"{self.cat:<12}| " + f"{self.name:<10}|" + f"{str(self.D):^4}|" + f"{str(self.H):^4}|"
-
+        return f"{self.cat:<12}|{self.name:<10}|{str(self.D):^4}|{str(self.H):^4}|"
     def __lt__(self, other):
         if self.cat != other.cat : return self.cat < other.cat
         else: return self.name < other.name
-
-    def isbetter(self,other):
-        if self.D < other.D:
-            return True
-        elif self.D > other.D:
-            return False
-        elif self.H < other.H:
-            return True
 
 listarmors = [
     armor("Armors","Cloth",1,-2),
