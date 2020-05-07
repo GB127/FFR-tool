@@ -3,7 +3,6 @@ class FFRError(BaseException):
 
 class FFRclasses:
     def __init__(self):
-        self.equip = {}
         self.canequip = {}
         self.acro = "XX"
 
@@ -18,7 +17,6 @@ class FFRclasses:
 class Fighter(FFRclasses):
     def __init__(self):
         self.acro = "Fi"
-        self.equip = {}
         self.canequip = {
                         "Armory" : {
                                     "Armors" : ["Cloth", "Wooden", "Chain", "Iron", "Silver", "Steel", "Ice", "Flame"],
@@ -46,7 +44,6 @@ class Knight(Fighter):
 
 class Thief(FFRclasses):
     def __init__(self):
-        self.equip = {}
         self.acro = "Th"
         self.canequip = {
                         "Armory" : {
@@ -75,7 +72,6 @@ class Ninja(Thief):
 class BlackBelt(FFRclasses):
     def __init__(self):
         self.acro = "BB"
-        self.equip = {}
         self.canequip = {
                         "Armory" : {
                                     "Armors" : ["Cloth", "Wooden"],
@@ -100,7 +96,6 @@ class Master(BlackBelt):
 class WhiteMage(FFRclasses):
     def __init__(self):
         self.acro = "WM"
-        self.equip = {}
         self.canequip = {
                         "Armory" : {
                                     "Armors" : ["Cloth"],
@@ -127,7 +122,6 @@ class WhiteWizard(WhiteMage):
 
 class BlackMage(FFRclasses):
     def __init__(self):
-        self.equip = {}
         self.acro = "BM"
         self.canequip = {
             "Armory" : {
@@ -154,7 +148,6 @@ class BlackWizard(BlackMage):
         self.canequip["Weapons"]["Others"].append("Catclaw")
 class RedMage(FFRclasses):
         def __init__(self):
-            self.equip = {}
             self.acro = "RM"
             self.canequip = {
                             "Armory" : {
