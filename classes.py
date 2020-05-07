@@ -145,7 +145,7 @@ class WhiteWizard(WhiteMage):
         super().__init__()
         self.acro = "WW"
         self.canequip["Weapons"]["Hammers"].append("Thor")
-        self.canequip["Armory"]["Armors"].append("White Shrit")
+        self.canequip["Armory"]["Armors"].append("White Shirt")
 
 class BlackMage(FFRclasses):
     def __init__(self):
