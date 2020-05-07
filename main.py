@@ -36,7 +36,7 @@ def print_table(what, liste, listechar):
 
 if __name__ == "__main__":
     clear()  # Note that this removes the ability to check if ran on the correct place
-    print("Fi/Kn, BB/Ma, Th/Nin, RM/RW, WM/WW, BM/BW")
+    print("Fi/Kn, BB/Ma, Th/Ni, RM/RW, WM/WW, BM/BW")
     
     char1 = acrodicto[input("What is your 1st class? ").upper()]()
     char2 = acrodicto[input("What is your 2nd class? ").upper()]()

@@ -42,8 +42,8 @@ class Knight(Fighter):
         super().__init__()
         self.acro = "Kn"
         # Armors TODO
-        self.canequip["Armory"]["Armor"].append("Opal")
-        self.canequip["Armory"]["Armor"].append("Dragon")
+        self.canequip["Armory"]["Armors"].append("Opal")
+        self.canequip["Armory"]["Armors"].append("Dragon")
         self.canequip["Armory"]["Shields"].append("Opal")
         self.canequip["Armory"]["Shields"].append("Aegis")
         self.canequip["Armory"]["Helmets"].append("Heal")
@@ -145,7 +145,7 @@ class WhiteWizard(WhiteMage):
         super().__init__()
         self.acro = "WW"
         self.canequip["Weapons"]["Hammers"].append("Thor")
-        self.canequip["Armory"]["Armor"].append("White Shrit")
+        self.canequip["Armory"]["Armors"].append("White Shrit")
 
 class BlackMage(FFRclasses):
     def __init__(self):
