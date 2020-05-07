@@ -23,12 +23,12 @@ def updateliste(liste,what, characters):
 
 
 def print_table(what, liste, listechar):
-    print(" " * 24 + "| A  | E  |" + f"{char1.acro:^3}|{char2.acro:^3}|{char3.acro:^3}|{char4.acro:^3}|")
-    print("-" * 50)
+    print(" " * 26 + "| A  | E  |" + f"{char1.acro:^3}|{char2.acro:^3}|{char3.acro:^3}|{char4.acro:^3}|")
+    print("-" * 53)
     for no,i in enumerate(liste):
         line = str(no) + ") " + str(i) + f"{char1.checkequip(what, i.cat, i.name, True):^3}|"  + f"{char2.checkequip(what, i.cat, i.name, True):^3}|"  + f"{char3.checkequip(what, i.cat, i.name, True):^3}|"  + f"{char4.checkequip(what, i.cat, i.name, True):^3}|"
         print(line)
-    print("-" * 50)
+    print("-" * 53)
 
 
 
@@ -56,11 +56,12 @@ if __name__ == "__main__":
         clear()
         if command == "LA":
             print_table("Armory", listarmors, listchar)
+            print("A = Absorb      E = Evasion")
+            print("-" * 53)
         elif command == "LW":
             print_table("Weapons", listweapons, listchar)
+            print("D = Damage      H = Hit %")
+            print("-" * 53)
         elif command == "END":
             print("Script Stopped")
             gaming = None
-
-
-    for i in listchar: print(i.equiped)
