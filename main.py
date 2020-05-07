@@ -13,7 +13,7 @@ acrodicto = {"FI" : Fi, "KN" : Kn, "BB" : BB, "MA" : Ma, "TH" : Th, "NI" : Ni,
              "RM" : RM, "RW" : RW, "WM" : WM, "WW" : WW, "BM" : BM, "BW" : BW}
 
 
-def print_table(what, liste):
+def print_table(what, liste, listechar):
     print(" " * 24 + "| A  | E  |" + f"{char1.acro:^3}|{char2.acro:^3}|{char3.acro:^3}|{char4.acro:^3}|")
     print("-" * 50)
     listcan = []
@@ -21,19 +21,33 @@ def print_table(what, liste):
         if any([i.checkequip(what, item.cat, item.name) for i in listchar]):
             listcan.append(item)
     listcan.sort()
-    for i in listcan:
-        line = str(i) + f"{char1.checkequip(what, i.cat, i.name, True):^3}|"  + f"{char2.checkequip(what, i.cat, i.name, True):^3}|"  + f"{char3.checkequip(what, i.cat, i.name, True):^3}|"  + f"{char4.checkequip(what, i.cat, i.name, True):^3}|"
+    for no,i in enumerate(listcan):
+        line = str(no) + ") " + str(i) + f"{char1.checkequip(what, i.cat, i.name, True):^3}|"  + f"{char2.checkequip(what, i.cat, i.name, True):^3}|"  + f"{char3.checkequip(what, i.cat, i.name, True):^3}|"  + f"{char4.checkequip(what, i.cat, i.name, True):^3}|"
         print(line)
     print("-" * 50)
+
+    command = input("Do you want to equip something? [Y/N]").upper()
+
+    if command == "Y":
+        who = int(input("Who will equip? [1,2,3,4]"))
+        item = int(input("Which item? [##]"))
+        listechar[who -1].equips(listcan[item])
+
+
+
 
 
 if __name__ == "__main__":
     clear()  # Note that this removes the ability to check if ran on the correct place
     print("Fi/Kn, BB/Ma, Th/Nin, RM/RW, WM/WW, BM/BW")
+    """
     char1 = acrodicto[input("What is your 1st class? ").upper()]()
     char2 = acrodicto[input("What is your 2nd class? ").upper()]()
     char3 = acrodicto[input("What is your 3rd class? ").upper()]()
     char4 = acrodicto[input("What is your 4th class? ").upper()]()
+    """
+
+    char1, char2, char3, char4 = BB(), RM(), BM(), Fi()
     listchar = [char1, char2, char3, char4]
 
 
@@ -44,9 +58,12 @@ if __name__ == "__main__":
         command = input("What would you like to do? ").upper()
         clear()
         if command == "LA":
-            print_table("Armory", listarmors)
+            print_table("Armory", listarmors, listchar)
         elif command == "LW":
-            print_table("Weapons", listweapons)
+            print_table("Weapons", listweapons, listchar)
         elif command == "END":
             print("Script Stopped")
             gaming = None
+
+
+    for i in listchar: print(i.equiped)

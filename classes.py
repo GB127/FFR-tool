@@ -4,7 +4,10 @@ class FFRclasses:
     def __init__(self):
         self.canequip = {}
         self.acro = "XX"
-        self.equip = []
+        self.equiped = []
+
+    def equips(self, wearmor):
+        self.equiped.append(wearmor)
 
     def checkequip(self,WA,cat,name, string=False):
         if name in self.canequip[WA][cat]: return "X"
@@ -16,7 +19,7 @@ class FFRclasses:
 
 class Fighter(FFRclasses):
     def __init__(self):
-        self.equip = []
+        self.equiped = []
         self.acro = "Fi"
         self.canequip = {
                         "Armory" : {
@@ -46,7 +49,7 @@ class Knight(Fighter):
 class Thief(FFRclasses):
     def __init__(self):
         self.acro = "Th"
-        self.equip = []
+        self.equiped = []
         self.canequip = {
                         "Armory" : {
                                     "Armors" : ["Cloth", "Wooden"],
@@ -74,7 +77,7 @@ class Ninja(Thief):
 class BlackBelt(FFRclasses):
     def __init__(self):
         self.acro = "BB"
-        self.equip = []
+        self.equiped = []
         self.canequip = {
                         "Armory" : {
                                     "Armors" : ["Cloth", "Wooden"],
@@ -99,7 +102,7 @@ class Master(BlackBelt):
 class WhiteMage(FFRclasses):
     def __init__(self):
         self.acro = "WM"
-        self.equip = []
+        self.equiped = []
         self.canequip = {
                         "Armory" : {
                                     "Armors" : ["Cloth"],
@@ -127,7 +130,7 @@ class WhiteWizard(WhiteMage):
 class BlackMage(FFRclasses):
     def __init__(self):
         self.acro = "BM"
-        self.equip = []
+        self.equiped = []
         self.canequip = {
             "Armory" : {
                         "Armors" : ["Cloth"],
@@ -154,7 +157,7 @@ class BlackWizard(BlackMage):
 class RedMage(FFRclasses):
         def __init__(self):
             self.acro = "RM"
-            self.equip = []
+            self.equiped = []
             self.canequip = {
                             "Armory" : {
                                         "Armors" : ["Cloth", "Wooden", "Chain", "Silver"],
