@@ -13,25 +13,22 @@ acrodicto = {"FI" : Fi, "KN" : Kn, "BB" : BB, "MA" : Ma, "TH" : Th, "NI" : Ni,
              "RM" : RM, "RW" : RW, "WM" : WM, "WW" : WW, "BM" : BM, "BW" : BW}
 
 
+def updateliste(liste,what, characters):
+    listcan = []
+    for item in liste :
+        if any([i.checkequip(what, item.cat, item.name) for i in characters]):
+            listcan.append(item)
+    listcan.sort()
+    return listcan
+
+
 def print_table(what, liste, listechar):
     print(" " * 24 + "| A  | E  |" + f"{char1.acro:^3}|{char2.acro:^3}|{char3.acro:^3}|{char4.acro:^3}|")
     print("-" * 50)
-    listcan = []
-    for item in liste :
-        if any([i.checkequip(what, item.cat, item.name) for i in listchar]):
-            listcan.append(item)
-    listcan.sort()
-    for no,i in enumerate(listcan):
+    for no,i in enumerate(liste):
         line = str(no) + ") " + str(i) + f"{char1.checkequip(what, i.cat, i.name, True):^3}|"  + f"{char2.checkequip(what, i.cat, i.name, True):^3}|"  + f"{char3.checkequip(what, i.cat, i.name, True):^3}|"  + f"{char4.checkequip(what, i.cat, i.name, True):^3}|"
         print(line)
     print("-" * 50)
-
-    command = input("Do you want to equip something? [Y/N]").upper()
-
-    if command == "Y":
-        who = int(input("Who will equip? [1,2,3,4]"))
-        item = int(input("Which item? [##]"))
-        listechar[who -1].equips(listcan[item])
 
 
 
@@ -47,10 +44,10 @@ if __name__ == "__main__":
     char4 = acrodicto[input("What is your 4th class? ").upper()]()
     """
 
-    char1, char2, char3, char4 = BB(), RM(), BM(), Fi()
+    char1, char2, char3, char4 = BB(), BM(), Th(), BM()
     listchar = [char1, char2, char3, char4]
-
-
+    listarmors = updateliste(listarmors, "Armory", listchar)
+    listweapons = updateliste(listweapons, "Weapons", listchar)
 
     gaming = True
     while gaming :
