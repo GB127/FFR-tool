@@ -35,6 +35,10 @@ In the new blackscreen, type this:
 
 The script should be running now.
 
+
+You could also try this, but I have no idea how it works.
+https://repl.it/languages/python3
+
 ---------------FUTURE PLANS--------------------------------------------------
 -> https://github.com/GB127/FFR-tool/issues
 
