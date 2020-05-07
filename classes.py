@@ -51,7 +51,7 @@ class Knight(Fighter):
         self.canequip["Armory"]["Gauntlets"].append("Zeus")
         self.canequip["Armory"]["Gauntlets"].append("Opal")
         self.canequip["Weapons"]["Swords"].append("Bane")
-        self.canequip["Weapons"]["Hammer"].append("Thor")
+        self.canequip["Weapons"]["Hammers"].append("Thor")
         self.canequip["Weapons"]["Others"] = ["Rapier", "Scimtar", "Sabre", "Falchon","Vorpal", "Catclaw", "Defense","Xcalber", "Masmune"]
 
 class Thief(FFRclasses):
