@@ -25,7 +25,7 @@ class Fighter(FFRclasses):
                         "Armory" : {
                                     "Armors" : ["Cloth", "Wooden", "Chain", "Iron", "Silver", "Steel", "Ice", "Flame"],
                                     "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
-                                    "Shields" : ["Wooden", "iron", "Silver", "Buckler", "Flame", "Ice", "ProCape"],
+                                    "Shields" : ["Wooden", "Iron", "Silver", "Buckler", "Flame", "Ice", "ProCape"],
                                     "Helmets" : ["Cap", "Wooden", "Iron", "Silver", "Ribbon"],
                                     "Gauntlets" : ["Gloves", "Copper", "Iron", "Silver","Power", "ProRing"]
                                     },
@@ -82,7 +82,7 @@ class Ninja(Thief):
                 "Armory" : {
                             "Armors" : ["Cloth", "Wooden", "Chain", "Iron", "Silver", "Ice", "Flame"],
                             "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
-                            "Shields" : ["Wooden", "iron", "Silver", "Buckler", "Flame", "Ice", "ProCape"],
+                            "Shields" : ["Wooden", "Iron", "Silver", "Buckler", "Flame", "Ice", "ProCape"],
                             "Helmets" : ["Cap", "Wooden", "Iron", "Silver","Heal", "Ribbon"],
                             "Gauntlets" : ["Gloves", "Cooper", "Iron", "Silver", "Zeus", "Power", "ProRing"]
                             },
