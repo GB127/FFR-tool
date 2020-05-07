@@ -42,6 +42,14 @@ class Knight(Fighter):
         super().__init__()
         self.acro = "Kn"
         # Armors TODO
+        self.canequip["Armory"]["Armor"].append("Opal")
+        self.canequip["Armory"]["Armor"].append("Dragon")
+        self.canequip["Armory"]["Shields"].append("Opal")
+        self.canequip["Armory"]["Shields"].append("Aegis")
+        self.canequip["Armory"]["Helmets"].append("Heal")
+        self.canequip["Armory"]["Helmets"].append("Opal")
+        self.canequip["Armory"]["Gauntlets"].append("Zeus")
+        self.canequip["Armory"]["Gauntlets"].append("Opal")
         self.canequip["Weapons"]["Swords"].append("Bane")
         self.canequip["Weapons"]["Hammer"].append("Thor")
         self.canequip["Weapons"]["Others"] = ["Rapier", "Scimtar", "Sabre", "Falchon","Vorpal", "Catclaw", "Defense","Xcalber", "Masmune"]
