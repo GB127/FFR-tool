@@ -94,11 +94,6 @@ class Ninja(Thief):
                             "Nunchucks" : ["Wooden", "Iron"],
                             "Others" : ["Rapier", "Scimtar", "Sabre", "Falchon","Vorpal", "Catclaw", "Defense", "Katana", "Masmune"]},
                 }
-
-        pass #FIXME
-        # http://mikesrpgcenter.com/ffantasy/armor.html
-        # http://mikesrpgcenter.com/ffantasy/weapons.html
-
 class BlackBelt(FFRclasses):
     def __init__(self):
         self.acro = "BB"

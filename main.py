@@ -37,14 +37,14 @@ def print_table(what, liste, listechar):
 if __name__ == "__main__":
     clear()  # Note that this removes the ability to check if ran on the correct place
     print("Fi/Kn, BB/Ma, Th/Nin, RM/RW, WM/WW, BM/BW")
-    """
+    
     char1 = acrodicto[input("What is your 1st class? ").upper()]()
     char2 = acrodicto[input("What is your 2nd class? ").upper()]()
     char3 = acrodicto[input("What is your 3rd class? ").upper()]()
     char4 = acrodicto[input("What is your 4th class? ").upper()]()
-    """
+    
 
-    char1, char2, char3, char4 = BB(), BM(), Th(), BM()
+    # char1, char2, char3, char4 = BB(), BM(), Th(), BM()
     listchar = [char1, char2, char3, char4]
     listarmors = updateliste(listarmors, "Armory", listchar)
     listweapons = updateliste(listweapons, "Weapons", listchar)
