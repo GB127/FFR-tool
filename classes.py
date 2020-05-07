@@ -78,6 +78,23 @@ class Thief(FFRclasses):
 class Ninja(Thief):
     def __init__(self):
         self.acro = "Ni"
+        self.canequip = {
+                "Armory" : {
+                            "Armors" : ["Cloth", "Wooden", "Chain", "Iron", "Silver", "Ice", "Flame"],
+                            "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
+                            "Shields" : ["Wooden", "iron", "Silver", "Buckler", "Flame", "Ice", "Procape"],
+                            "Helmets" : ["Cap", "Wooden", "Iron", "Silver","Heal", "Ribbon"],
+                            "Gauntlets" : ["Gloves", "Cooper", "Iron", "Silver", "Zeus", "Power", "ProRing"]
+                            },
+                "Weapons": {"Swords" : ["Short","Were", "Rune", "Dragon", "Coral", "Long", "Silver", "Giant","Bane", "Flame", "Ice", "Sun"],
+                            "Axes" : ["Hand", "Great", "Silver", "Light"],
+                            "Daggers" : ["Small", "Large", "Silver"],
+                            "Staffs" : ["Wooden","Power", "Iron", "Heal", "Mage"],
+                            "Hammers" : ["Iron", "Silver", "Thor"],
+                            "Nunchucks" : ["Wooden", "Iron"],
+                            "Others" : ["Rapier", "Scimtar", "Sabre", "Falchon","Vorpal", "Catclaw", "Defense", "Katana", "Masmune"]},
+                }
+
         pass #FIXME
         # http://mikesrpgcenter.com/ffantasy/armor.html
         # http://mikesrpgcenter.com/ffantasy/weapons.html
