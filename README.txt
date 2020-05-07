@@ -1,14 +1,15 @@
+----------------ABOUT----------------------------------------------------------
+For the game Final Fantasy of the NES.
+
+This is a script to list the armors and weapons that can be equiped by your
+four characters.
+
+Written by Niamek
 ---------------DISCLAIMER------------------------------------------------------
-This is a script I made to ease my plays of the Final Fantasy Randomizer.
-Note that this can be also be used for the original Final Fantasy of the NES.
-
 I'm not a very experienced programmer. I'll probably never develop an interface
-that is outside of the command line. If I ever get out of the command line, it
-won't be soon. So, to use the script, you'll have to use the command line.
+that is outside of the command line. So, to use the script, you'll have to use
+the command line.
 I'm providing at least the instructions, so it shouldn't be an issue.
-
-At the current state, it doesn't allow you to make typos. That's a fix I plan
-to do soon.
 
 ---------------HOW TO RUN THE SCRIPT-------------------------------------------
 To use this, you need to have python installer on your computer.
@@ -34,14 +35,11 @@ In the new blackscreen, type this:
 
 The script should be running now.
 
+---------------FUTURE PLANS--------------------------------------------------
+-> https://github.com/GB127/FFR-tool/issues
 
-
-
-
-
-
-
-
+Note that I'm a new coder, so codes aren't the best yet. I always plan to
+improve the code when I have an idea.
 -----------------------------------------------------------------------------
 The infos I used to write this script comes from
 http://mikesrpgcenter.com/
