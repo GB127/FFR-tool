@@ -25,9 +25,9 @@ class Fighter(FFRclasses):
                         "Armory" : {
                                     "Armors" : ["Cloth", "Wooden", "Chain", "Iron", "Silver", "Steel", "Ice", "Flame"],
                                     "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
-                                    "Shields" : ["Wooden", "iron", "Silver", "Buckler", "Flame", "Ice", "Procape"],
+                                    "Shields" : ["Wooden", "iron", "Silver", "Buckler", "Flame", "Ice", "ProCape"],
                                     "Helmets" : ["Cap", "Wooden", "Iron", "Silver", "Ribbon"],
-                                    "Gauntlets" : ["Gloves", "Cooper", "Iron", "Silver","Power", "ProRing"]
+                                    "Gauntlets" : ["Gloves", "Copper", "Iron", "Silver","Power", "ProRing"]
                                     },
                         "Weapons": {"Swords" : ["Short","Were", "Rune", "Dragon", "Coral", "Long", "Silver", "Giant", "Flame", "Ice", "Sun"],
                                     "Axes" : ["Hand", "Great", "Silver", "Light"],
@@ -62,7 +62,7 @@ class Thief(FFRclasses):
                         "Armory" : {
                                     "Armors" : ["Cloth", "Wooden"],
                                     "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
-                                    "Shields" : ["Buckler", "Procape"],
+                                    "Shields" : ["Buckler", "ProCape"],
                                     "Helmets" : ["Cap", "Ribbon"],
                                     "Gauntlets" : ["Gloves", "ProRing"]
                                     },
@@ -82,7 +82,7 @@ class Ninja(Thief):
                 "Armory" : {
                             "Armors" : ["Cloth", "Wooden", "Chain", "Iron", "Silver", "Ice", "Flame"],
                             "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
-                            "Shields" : ["Wooden", "iron", "Silver", "Buckler", "Flame", "Ice", "Procape"],
+                            "Shields" : ["Wooden", "iron", "Silver", "Buckler", "Flame", "Ice", "ProCape"],
                             "Helmets" : ["Cap", "Wooden", "Iron", "Silver","Heal", "Ribbon"],
                             "Gauntlets" : ["Gloves", "Cooper", "Iron", "Silver", "Zeus", "Power", "ProRing"]
                             },
@@ -127,7 +127,7 @@ class WhiteMage(FFRclasses):
                         "Armory" : {
                                     "Armors" : ["Cloth"],
                                     "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
-                                    "Shields" : ["Procape"],
+                                    "Shields" : ["ProCape"],
                                     "Helmets" : ["Cap", "Ribbon"],
                                     "Gauntlets" : ["Gloves", "ProRing"]
                                     },
