@@ -115,6 +115,15 @@ listweapons = [
 
 
 
+def updateliste(liste,what, characters):
+    listcan = []
+    for item in liste :
+        if any([i.checkequip(what, item.cat, item.name) for i in characters]):
+            listcan.append(item)
+    listcan.sort()
+    return listcan
+
+
 if __name__ == "__main__":
     test = armor("Swords", "Shorts", 50, 60)
     print(test)

@@ -1,5 +1,5 @@
 from classes import *
-from Equips import weapon, listweapons, armor, listarmors  # this works
+from Equips import weapon, listweapons, armor, listarmors, updateliste  # this works
 from affichage import *
 import os
 
@@ -13,13 +13,6 @@ acrodicto = {"FI" : Fi, "KN" : Kn, "BB" : BB, "MA" : Ma, "TH" : Th, "NI" : Ni,
              "RM" : RM, "RW" : RW, "WM" : WM, "WW" : WW, "BM" : BM, "BW" : BW}
 
 
-def updateliste(liste,what, characters):
-    listcan = []
-    for item in liste :
-        if any([i.checkequip(what, item.cat, item.name) for i in characters]):
-            listcan.append(item)
-    listcan.sort()
-    return listcan
 
 
 def print_table(what, liste, listechar):
