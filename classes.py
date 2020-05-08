@@ -186,7 +186,7 @@ class Master(BlackBelt):
     def __init__(self):
         super().__init__()
         self.acro = "Ma"
-        self.canequip["Weapons"]["Staffs"].append("Iron")
+        self.canequip.append(weapon("Staffs","Iron",14,0))
 class WhiteMage(FFRclasses):
     def __init__(self):
         self.acro = "WM"
