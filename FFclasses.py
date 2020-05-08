@@ -107,28 +107,29 @@ class Ninja(Thief):
 class BlackBelt(FFRclasses):
     def __init__(self):
         self.acro = "BB"
-
         self.canequip = [
-            armor("Armors","Cloth",1,-2),
-            armor("Armors","Wooden",4,-5),
-            armor("Bracelets","Copper",4,-1),
-            armor("Bracelets","Silver",15,-1),
-            armor("Bracelets","Gold",24,-1),
-            armor("Bracelets","Opal",36,-1),
-            armor("Helmets","Cap",1,-1),
-            armor("Helmets","Ribbon",1,-1),
-            weapon("Staffs","Wooden",6, 0),
-            weapon("Staffs","Power",12,0),
-            weapon("Nunchucks","Wooden",12,0),
-            weapon("Nunchucks","Iron",16,0),
-            weapon("Others","Masmune",56,50),
-            armor("Gauntlets","Gloves",1,-1),
-            armor("Gauntlets","ProRing",8,-1)]
+            listweapons[19],
+            listweapons[20],
+            listweapons[28],
+            listweapons[29],
+            listweapons[39],
+            listarmors[0],
+            listarmors[1],
+            listarmors[12],
+            listarmors[13],
+            listarmors[14],
+            listarmors[15],
+            listarmors[25],
+            listarmors[31],
+            listarmors[32],
+            listarmors[39]]
+
 class Master(BlackBelt):
     def __init__(self):
         super().__init__()
         self.acro = "Ma"
-        self.canequip.append(weapon("Staffs","Iron",14,0))
+        
+        self.canequip.append(listweapons[21])
 class WhiteMage(FFRclasses):
     def __init__(self):
         self.acro = "WM"
