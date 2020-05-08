@@ -98,7 +98,6 @@ class Knight(Fighter):
     def __init__(self):
         super().__init__()
         self.acro = "Kn"
-        # Armors TODO
         self.canequip.append(armor("Armors","Opal",42,-10))
         self.canequip.append(armor("Armors","Dragon",42,-10))
         self.canequip.append(armor("Shields","Opal",16,0))
@@ -118,22 +117,32 @@ class Knight(Fighter):
 class Thief(FFRclasses):
     def __init__(self):
         self.acro = "Th"
-        self.canequip = {
-                        "Armory" : {
-                                    "Armors" : ["Cloth", "Wooden"],
-                                    "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
-                                    "Shields" : ["Buckler", "ProCape"],
-                                    "Helmets" : ["Cap", "Ribbon"],
-                                    "Gauntlets" : ["Gloves", "ProRing"]
-                                    },
-                        "Weapons": {"Swords" : ["Rune", "Dragon", "Coral"],
-                                    "Axes" : [],
-                                    "Daggers" : ["Small", "Large", "Silver"],
-                                    "Staffs" : [],
-                                    "Hammers" : [],
-                                    "Nunchucks" : [],
-                                    "Others" : ["Rapier", "Scimtar", "Sabre", "Falchon", "Masmune"]},
-                        }
+
+        self.canequip = [
+            armor("Armors","Cloth",1,-2),
+            armor("Armors","Wooden",4,-5),
+            armor("Bracelets","Copper",4,-1),
+            armor("Bracelets","Silver",15,-1),
+            armor("Bracelets","Gold",24,-1),
+            armor("Bracelets","Opal",36,-1),
+            armor("Shields","Buckler",2,0),
+            armor("Shields","ProCape",8,-2),
+            armor("Helmets","Cap",1,-1),
+            armor("Helmets","Ribbon",1,-1),
+            armor("Gauntlets","Gloves",1,-1),
+            armor("Gauntlets","ProRing",8,-1),
+            weapon("Swords","Rune",18,15),
+            weapon("Swords","Dragon",19,15),
+            weapon("Swords","Coral",19,15),
+            weapon("Daggers","Small",5,10),
+            weapon("Daggers","Large",7,10),
+            weapon("Daggers","Silver",10,15),
+            weapon("Others","Rapier",9,5),
+            weapon("Others","Scimtar",10,10),
+            weapon("Others","Sabre",13,5),
+            weapon("Others","Falchon",15,10),
+            weapon("Others","Masmune",56,50)]
+
 
 class Ninja(Thief):
     def __init__(self):
