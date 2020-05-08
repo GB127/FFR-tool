@@ -19,25 +19,25 @@ def print_table(what, liste, listechar):
     string = " " * 27 + "| A  | E  |"
     for char in listechar:
         string += f"{char.acro:^3}|"
-    string += "\n" + ("-" * 53)
+    string += "\n" + ("-" * 38) + "----" * len(listechar)
     for no,i in enumerate(liste):
         line = f'{str(no):<2}  ' + str(i)
         for char in listechar:
             line += f"{char.checkequip(what, i.cat, i.name, True):^3}|"
         string += f"\n{line}"
-    string += "\n" + ("-" * 53)
+    string += "\n" + ("-" * 38) + "----" * len(listechar)
     print(string)
 
 
 if __name__ == "__main__":
     clear()
     # team = input("How many characters in your team? [1,2,3,4]")
+    team = int(input("How many team members? [1,2,3,4]"))
     print("Fi/Kn, BB/Ma, Th/Ni, RM/RW, WM/WW, BM/BW")
     listchar = []
-    for _ in range(4):
+    for _ in range(team):
         listchar.append(acrodicto[input("What is your 1st class? ").upper()]())
 
-    # char1, char2, char3, char4 = BB(), BM(), Th(), BM()
     #listchar = [char1, char2, char3, char4]
     listarmors = updateliste(listarmors, "Armory", listchar)
     listweapons = updateliste(listweapons, "Weapons", listchar)
@@ -49,12 +49,8 @@ if __name__ == "__main__":
         clear()
         if command == "LA":
             print_table("Armory", listarmors, listchar)
-            print("A = Absorb      E = Evasion")
-            print("-" * 53)
         elif command == "LW":
             print_table("Weapons", listweapons, listchar)
-            print("D = Damage      H = Hit %")
-            print("-" * 53)
         elif command == "END":
             print("Script Stopped")
             gaming = None
