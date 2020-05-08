@@ -38,14 +38,14 @@ def print_table(what, liste, listechar):
 
 if __name__ == "__main__":
     clear()
-    # team = input("How many characters in your team? [1,2,3,4]")
     team = int(input("How many team members?"))
     print("Fi/Kn, BB/Ma, Th/Ni, RM/RW, WM/WW, BM/BW")
+
+    #listchar = [char1, char2, char3, char4]
     listchar = []
     for _ in range(team):
         listchar.append(acrodicto[input("What is your 1st class? ").upper()]())
 
-    #listchar = [char1, char2, char3, char4]
     listarmors = updateliste(listarmors, "Armory", listchar)
     listweapons = updateliste(listweapons, "Weapons", listchar)
 
