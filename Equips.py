@@ -119,26 +119,28 @@ listweapons = [
 
 
 
-def updateliste(liste,what, characters):
+def updateliste(listWA,characters):  # Ok
     """ Function that take a list of armor or weapon and a list of characters
         and returns an updated list that removes items that can't be equiped by 
         the whole team.
 
         Arguments:
             liste (list) : uniform List of weapons or armors to be updated.
-            what (str) : "Armory" or "Weapons"
             characters (list) : List of the characters in the team
     """
     listcan = []
-    for item in liste :
-        if any([i.checkequip(what, item.cat, item.name) for i in characters]):
+    for item in listWA :
+        if any([char.checkequip(item) for char in characters]):
             listcan.append(item)
     listcan.sort()
     return listcan
 
 
 if __name__ == "__main__":
-    test = armor("Swords", "Shorts", 50, 60)
-    print(test)
-    testw = weapon("Cool", "this",4,6)
-    print(testw)
+    #from FFclasses import BlackBelt
+    #team = [BlackBelt()]
+    #updated = updateliste(listarmors,team)
+    #print(updated)
+
+    for i,item in enumerate(listweapons):
+        print(i,item)
