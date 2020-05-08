@@ -1,10 +1,18 @@
 ----------------ABOUT----------------------------------------------------------
 For the game Final Fantasy of the NES.
 
-This is a script to list the armors and weapons that can be equiped by your
-four characters.
+This is a script to list the armors and weapons that can be equiped by the classes
 
 Written by Niamek
+
+
+---------------FEATURES--------------------------------------------------------
+-> Support any number of classes in your team
+-> List weapons only equippable by your team
+    -> Their D-H are also displayed
+-> List armors only equippable by your team
+    -> Their A-E are also displayed
+
 ---------------DISCLAIMER------------------------------------------------------
 I'm not a very experienced programmer. I'll probably never develop an interface
 that is outside of the command line. So, to use the script, you'll have to use
@@ -21,9 +29,10 @@ Next, you need to have a folder with everything the program needs to import
 in the SAME folder.
 
 At the current time, there are 4 files that needs to be in the folder:
+    main.py => The program to run.
+    affichage.py => This containts stuffs related to the displays
     classes.py => This contain the FF classes.
     Equips.py => This contain the weapons and armors.
-    main.py => The program to run.
     README.txt => This file.
 
 Next, you need to open the command line IN THE FOLDER. Here is an easy way
