@@ -1,25 +1,32 @@
 class FFRError(BaseException):
     pass  # We'll see
 class FFRclasses:
+    """ Grandfather of classes. This encapsulates all methods that are
+        shared between all classes. Can't be used since it doesn't have
+        a self.canequip that isn't empty.
+    
+
+        Datas of all the classes:
+            acro (str) : String of two characters that identidy the class.
+            canequip : Dicto of everything that the class can equip.
+
+        Methods of all classes:
+            checkequip: Checks if said class can equip the item provided.
+
+    
+    """
     def __init__(self):
         self.canequip = {}
         self.acro = "XX"
-        self.equiped = []
-
-    def equips(self, wearmor):
-        self.equiped.append(wearmor)
 
     def checkequip(self,WA,cat,name, string=False):
         if name in self.canequip[WA][cat]: return "X"
         else : 
             if string: return "-"
             return False
-    def getacro(self):
-        return self.acro
 
 class Fighter(FFRclasses):
     def __init__(self):
-        self.equiped = []
         self.acro = "Fi"
         self.canequip = {
                         "Armory" : {
@@ -57,7 +64,6 @@ class Knight(Fighter):
 class Thief(FFRclasses):
     def __init__(self):
         self.acro = "Th"
-        self.equiped = []
         self.canequip = {
                         "Armory" : {
                                     "Armors" : ["Cloth", "Wooden"],
@@ -97,7 +103,6 @@ class Ninja(Thief):
 class BlackBelt(FFRclasses):
     def __init__(self):
         self.acro = "BB"
-        self.equiped = []
         self.canequip = {
                         "Armory" : {
                                     "Armors" : ["Cloth", "Wooden"],
@@ -122,7 +127,6 @@ class Master(BlackBelt):
 class WhiteMage(FFRclasses):
     def __init__(self):
         self.acro = "WM"
-        self.equiped = []
         self.canequip = {
                         "Armory" : {
                                     "Armors" : ["Cloth"],
@@ -150,7 +154,6 @@ class WhiteWizard(WhiteMage):
 class BlackMage(FFRclasses):
     def __init__(self):
         self.acro = "BM"
-        self.equiped = []
         self.canequip = {
             "Armory" : {
                         "Armors" : ["Cloth"],
@@ -177,23 +180,22 @@ class BlackWizard(BlackMage):
 class RedMage(FFRclasses):
         def __init__(self):
             self.acro = "RM"
-            self.equiped = []
             self.canequip = {
-                            "Armory" : {
-                                        "Armors" : ["Cloth", "Wooden", "Chain", "Silver"],
-                                        "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
-                                        "Shields" : ["Buckler"],
-                                        "Helmets" : ["Cap", "Ribbon"],
-                                        "Gauntlets" : ["Gloves", "ProRing"]
-                                        },
-                            "Weapons": {"Swords" : ["Short", "Rune", "Dragon", "Coral", "Long", "Silver", "Giant", "Flame", "Ice", "Sun"],
-                                        "Axes" : [],
-                                        "Daggers" : ["Small", "Large", "Silver"],
-                                        "Staffs" : ["Wooden"],
-                                        "Hammers" : [],
-                                        "Nunchucks" : [],
-                                        "Others" : ["Rapier", "Scimtar", "Sabre", "Falchon", "Masmune"]},
-                            }
+                        "Armory" : {
+                                    "Armors" : ["Cloth", "Wooden", "Chain", "Silver"],
+                                    "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
+                                    "Shields" : ["Buckler"],
+                                    "Helmets" : ["Cap", "Ribbon"],
+                                    "Gauntlets" : ["Gloves", "ProRing"]
+                                    },
+                        "Weapons": {"Swords" : ["Short", "Rune", "Dragon", "Coral", "Long", "Silver", "Giant", "Flame", "Ice", "Sun"],
+                                    "Axes" : [],
+                                    "Daggers" : ["Small", "Large", "Silver"],
+                                    "Staffs" : ["Wooden"],
+                                    "Hammers" : [],
+                                    "Nunchucks" : [],
+                                    "Others" : ["Rapier", "Scimtar", "Sabre", "Falchon", "Masmune"]},
+                        }
 class RedWizard(RedMage):
     def __init__(self):
         super().__init__()
