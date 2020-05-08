@@ -1,4 +1,4 @@
-from Equips import weapon, armor
+from Equips import weapon, armor, listarmors, listweapons
 
 class FFRError(BaseException):
     pass  # We'll see
@@ -18,11 +18,13 @@ class FFRclasses:
     
     """
     def __init__(self):
-        self.canequip = {}
+        self.canequip = []
         self.acro = "XX"
 
-    def checkequip(self,WA,cat,name, string=False):
-        if name in self.canequip[WA][cat]: return "X"
+    def checkequip(self,WA, string=False):
+        if WA in self.canequip: 
+            print("allo")
+            return "X"
         else : 
             if string: return "-"
             return False
@@ -30,118 +32,58 @@ class FFRclasses:
 class Fighter(FFRclasses):
     def __init__(self):
         self.acro = "Fi"
-        self.canequip = [
-            armor("Armors","Cloth",1,-2),
-            armor("Armors","Wooden",4,-5),
-            armor("Armors","Chain",15,-15),
-            armor("Armors","Iron",24,-23),
-            armor("Armors","Silver",18,-8),
-            armor("Armors","Steel",34,-33),
-            armor("Armors","Ice",34,-10),
-            armor("Armors","Flame",34,-10),    
-            armor("Bracelets","Copper",4,-1),
-            armor("Bracelets","Silver",15,-1),
-            armor("Bracelets","Gold",24,-1),
-            armor("Bracelets","Opal",36,-1),
-            armor("Shields","Wooden",2,0),
-            armor("Shields","Iron",4,0),
-            armor("Shields","Silver",8,0),
-            armor("Shields","Buckler",2,0),
-            armor("Shields","Flame",12,0),
-            armor("Shields","Ice",12,0),
-            armor("Shields","ProCape",8,-2),
-            armor("Helmets","Cap",1,-1),
-            armor("Helmets","Wooden",3,-3),
-            armor("Helmets","Iron",5,-5),
-            armor("Helmets","Silver",6,-3),
-            armor("Helmets","Ribbon",1,-1),
-            armor("Gauntlets","Gloves",1,-1),
-            armor("Gauntlets","Copper",2,-3),
-            armor("Gauntlets","Iron",4,-5),
-            armor("Gauntlets","Silver",6,-3),
-            armor("Gauntlets","Power",6,-3),
-            armor("Gauntlets","ProRing",8,-1),
-            weapon("Swords","Short",15,10),
-            weapon("Swords","Rune",18,15),
-            weapon("Swords","Were",18,15),
-            weapon("Swords","Dragon",19,15),
-            weapon("Swords","Coral",19,15),
-            weapon("Swords","Long",20,10),
-            weapon("Swords","Silver",23,15),
-            weapon("Swords","Giant",21,20),
-            weapon("Swords","Flame",26,20),
-            weapon("Swords","Ice",29,25),
-            weapon("Swords","Sun",32,30),
-            weapon("Axes","Hand",16,5),
-            weapon("Axes","Great",22,5),
-            weapon("Axes","Silver",25,10),
-            weapon("Axes","Light",28,15),
+        self.canequip = [listarmors[0],listarmors[1],listarmors[2],listarmors[3],listarmors[4], listarmors[5],listarmors[6],listarmors[7],listarmors[12],listarmors[13], listarmors[14],listarmors[15],listarmors[16],listarmors[17],listarmors[18],listarmors[19],listarmors[20],listarmors[21],listarmors[24],listarmors[25],listarmors[26],listarmors[27],listarmors[28],listarmors[31],listarmors[32],listarmors[33],listarmors[34],listarmors[35],listarmors[37],listarmors[39],
+                        listweapons[0], listweapons[1], listweapons[2], listweapons[3],listweapons[4], listweapons[5], listweapons[6], listweapons[7], listweapons[9], listweapons[10], listweapons[11], listweapons[12], listweapons[13], listweapons[14], listweapons[15], listweapons[16], listweapons[17], listweapons[18], listweapons[19], listweapons[20], listweapons[21], listweapons[25], listweapons[26], listweapons[30], listweapons[31], listweapons[32], listweapons[33],listweapons[39]]
 
-            weapon("Daggers","Small",5,10),
-            weapon("Daggers","Large",7,10),
-            weapon("Daggers","Silver",10,15),
-
-            weapon("Staffs","Wooden",6, 0),
-            weapon("Staffs","Power",12,0),
-            weapon("Staffs","Iron",14,0),
-
-            weapon("Hammers","Iron",9,0),
-            weapon("Hammers","Silver",12,5),
-
-
-            weapon("Others","Rapier",9,5),
-            weapon("Others","Scimtar",10,10),
-            weapon("Others","Sabre",13,5),
-            weapon("Others","Falchon",15,10),
-            weapon("Others","Masmune",56,50)]
 class Knight(Fighter):
     def __init__(self):
         super().__init__()
         self.acro = "Kn"
-        self.canequip.append(armor("Armors","Opal",42,-10))
-        self.canequip.append(armor("Armors","Dragon",42,-10))
-        self.canequip.append(armor("Shields","Opal",16,0))
-        self.canequip.append(armor("Shields","Aegis",16,0))
-        self.canequip.append(armor("Helmets","Heal",6,-3))
-        self.canequip.append(armor("Helmets","Opal",8,-3))
-        self.canequip.append(armor("Gauntlets","Zeus",6,-3))
-        self.canequip.append(armor("Gauntlets","Opal",8,-3))
-        self.canequip.append(weapon("Swords","Bane",22,20))
-        self.canequip.append(weapon("Hammers","Thor",18,15))
-        self.canequip.append(weapon("Others","Vorpal",24,25))
-        self.canequip.append(weapon("Others","Catclaw",22,35))
-        self.canequip.append(weapon("Others","Defense",30,35))
-        self.canequip.append(weapon("Others","Xcalber",45,35))
+        self.canequip += [
+            listarmors[8],
+            listarmors[9],
+            listarmors[22],
+            listarmors[23],
+            listarmors[29],
+            listarmors[30],
+            listarmors[36],
+            listarmors[38],
+            listweapons[8],
+            listweapons[27],
+            listweapons[34],
+            listweapons[35],
+            listweapons[36],
+            listweapons[38]]
 
 
 class Thief(FFRclasses):
     def __init__(self):
         self.acro = "Th"
         self.canequip = [
-            armor("Armors","Cloth",1,-2),
-            armor("Armors","Wooden",4,-5),
-            armor("Bracelets","Copper",4,-1),
-            armor("Bracelets","Silver",15,-1),
-            armor("Bracelets","Gold",24,-1),
-            armor("Bracelets","Opal",36,-1),
-            armor("Shields","Buckler",2,0),
-            armor("Shields","ProCape",8,-2),
-            armor("Helmets","Cap",1,-1),
-            armor("Helmets","Ribbon",1,-1),
-            armor("Gauntlets","Gloves",1,-1),
-            armor("Gauntlets","ProRing",8,-1),
-            weapon("Swords","Rune",18,15),
-            weapon("Swords","Dragon",19,15),
-            weapon("Swords","Coral",19,15),
-            weapon("Daggers","Small",5,10),
-            weapon("Daggers","Large",7,10),
-            weapon("Daggers","Silver",10,15),
-            weapon("Others","Rapier",9,5),
-            weapon("Others","Scimtar",10,10),
-            weapon("Others","Sabre",13,5),
-            weapon("Others","Falchon",15,10),
-            weapon("Others","Masmune",56,50)]
-
+            listarmors[0],
+            listarmors[1],
+            listarmors[4],
+            listarmors[12],
+            listarmors[13],
+            listarmors[14],
+            listarmors[15],
+            listarmors[19],
+            listarmors[24],
+            listarmors[25],
+            listarmors[31],
+            listarmors[32],
+            listarmors[39],
+            listweapons[1],
+            listweapons[3],
+            listweapons[4],
+            listweapons[16],
+            listweapons[17],
+            listweapons[18],
+            listweapons[30],
+            listweapons[31],
+            listweapons[32],
+            listweapons[33],
+            listweapons[39]]
 
 class Ninja(Thief):
     def __init__(self):
