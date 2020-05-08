@@ -246,32 +246,52 @@ class BlackWizard(BlackMage):
 class RedMage(FFRclasses):
         def __init__(self):
             self.acro = "RM"
-            self.canequip = {
-                        "Armory" : {
-                                    "Armors" : ["Cloth", "Wooden", "Chain", "Silver"],
-                                    "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
-                                    "Shields" : ["Buckler"],
-                                    "Helmets" : ["Cap", "Ribbon"],
-                                    "Gauntlets" : ["Gloves", "ProRing"]
-                                    },
-                        "Weapons": {"Swords" : ["Short", "Rune", "Dragon", "Coral", "Long", "Silver", "Giant", "Flame", "Ice", "Sun"],
-                                    "Axes" : [],
-                                    "Daggers" : ["Small", "Large", "Silver"],
-                                    "Staffs" : ["Wooden"],
-                                    "Hammers" : [],
-                                    "Nunchucks" : [],
-                                    "Others" : ["Rapier", "Scimtar", "Sabre", "Falchon", "Masmune"]},
-                        }
+
+        self.canequip = [
+            armor("Armors","Cloth",1,-2),
+            armor("Armors","Wooden",4,-5),
+            armor("Armors","Chain",15,-15),
+            armor("Armors","Silver",18,-8),
+            armor("Bracelets","Copper",4,-1),
+            armor("Bracelets","Silver",15,-1),
+            armor("Bracelets","Gold",24,-1),
+            armor("Bracelets","Opal",36,-1),
+            armor("Shields","Buckler",2,0),
+            armor("Helmets","Cap",1,-1),
+            armor("Helmets","Ribbon",1,-1),
+            armor("Gauntlets","Gloves",1,-1),
+            armor("Gauntlets","ProRing",8,-1),
+            weapon("Swords","Short",15,10),
+            weapon("Swords","Rune",18,15),
+            weapon("Swords","Dragon",19,15),
+            weapon("Swords","Coral",19,15),
+            weapon("Swords","Long",20,10),
+            weapon("Swords","Silver",23,15),
+            weapon("Swords","Giant",21,20),
+            weapon("Swords","Flame",26,20),
+            weapon("Swords","Ice",29,25),
+            weapon("Swords","Sun",32,30),
+            weapon("Daggers","Small",5,10),
+            weapon("Daggers","Large",7,10),
+            weapon("Daggers","Silver",10,15),
+            weapon("Staffs","Wooden",6, 0),
+            weapon("Others","Rapier",9,5),
+            weapon("Others","Scimtar",10,10),
+            weapon("Others","Sabre",13,5),
+            weapon("Others","Falchon",15,10),
+            weapon("Others","Masmune",56,50)]
+
+
 class RedWizard(RedMage):
     def __init__(self):
         super().__init__()
         self.acro = "RW"
-        self.canequip["Armory"]["Shields"].append("ProCape")
-        self.canequip["Armory"]["Gauntlets"].append("Silver")
-        self.canequip["Armory"]["Gauntlets"].append("Zeus")
-        self.canequip["Armory"]["Gauntlets"].append("Power")
-        self.canequip["Weapons"]["Swords"].append("Were")
-        self.canequip["Weapons"]["Swords"].append("Bane")
-        self.canequip["Weapons"]["Others"].append("Vorpal")
-        self.canequip["Weapons"]["Others"].append("Catclaw")
-        self.canequip["Weapons"]["Others"].append("Defense")
+        self.canequip.append(armor("Shields","ProCape",8,-2))
+        self.canequip.append(armor("Gauntlets","Silver",6,-3))
+        self.canequip.append(armor("Gauntlets","Zeus",6,-3))
+        self.canequip.append(armor("Gauntlets","Power",6,-3))
+        self.canequip.append(weapon("Swords","Were",18,15))
+        self.canequip.append(weapon("Swords","Bane",22,20))
+        self.canequip.append(weapon("Others","Vorpal",24,25))
+        self.canequip.append(weapon("Others","Catclaw",22,35))
+        self.canequip.append(weapon("Others","Defense",30,35))
