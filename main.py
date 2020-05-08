@@ -1,4 +1,4 @@
-from classes import *
+from FFclasses import *
 from Equips import weapon, listweapons, armor, listarmors, updateliste  # this works
 from affichage import *
 import os

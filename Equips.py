@@ -82,6 +82,7 @@ listweapons = [
     weapon("Swords","Flame",26,20),
     weapon("Swords","Ice",29,25),
     weapon("Swords","Sun",32,30),
+
     weapon("Axes","Hand",16,5),
     weapon("Axes","Great",22,5),
     weapon("Axes","Silver",25,10),
@@ -101,7 +102,7 @@ listweapons = [
     weapon("Hammers","Iron",9,0),
     weapon("Hammers","Silver",12,5),
     weapon("Hammers","Thor",18,15),
-    
+
     weapon("Nunchucks","Wooden",12,0),
     weapon("Nunchucks","Iron",16,0),
 
