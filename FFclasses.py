@@ -134,29 +134,30 @@ class WhiteMage(FFRclasses):
     def __init__(self):
         self.acro = "WM"
         self.canequip = [
-            armor("Armors","Cloth",1,-2),
-            armor("Bracelets","Copper",4,-1),
-            armor("Bracelets","Silver",15,-1),
-            armor("Bracelets","Gold",24,-1),
-            armor("Bracelets","Opal",36,-1),
-            armor("Shields","ProCape",8,-2),
-            armor("Helmets","Cap",1,-1),
-            armor("Helmets","Ribbon",1,-1),
-            armor("Gauntlets","Gloves",1,-1),
-            armor("Gauntlets","ProRing",8,-1),
-            weapon("Staffs","Wooden",6, 0),
-            weapon("Staffs","Power",12,0),
-            weapon("Staffs","Heal",6,0),
-            weapon("Hammers","Iron",9,0),
-            weapon("Hammers","Silver",12,5),
-            weapon("Others","Masmune",56,50)]
+            listarmors[0],
+            listarmors[12],
+            listarmors[13],
+            listarmors[14],
+            listarmors[15],
+            listarmors[24],
+            listarmors[25],
+            listarmors[31],
+            listarmors[32],
+            listarmors[39],
+            listweapons[19],
+            listweapons[20],
+            listweapons[22],
+            listweapons[25],
+            listweapons[26],
+            listweapons[39]]
+
 
 class WhiteWizard(WhiteMage):
     def __init__(self):
         super().__init__()
         self.acro = "WW"
-        self.canequip.append(weapon("Hammers","Thor",18,15))
-        self.canequip.append(armor("Armors","Wht Shrt",24,-2))
+        self.canequip.append(listweapons[27])
+        self.canequip.append(listarmors[11])
 
 class BlackMage(FFRclasses):
     def __init__(self):
