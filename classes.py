@@ -218,29 +218,31 @@ class WhiteWizard(WhiteMage):
 class BlackMage(FFRclasses):
     def __init__(self):
         self.acro = "BM"
-        self.canequip = {
-            "Armory" : {
-                        "Armors" : ["Cloth"],
-                        "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
-                        "Shields" : ["ProCape"],
-                        "Helmets" : ["Cap", "Ribbon"],
-                        "Gauntlets" : ["Gloves", "ProRing"]
-                        },
-            "Weapons": {"Swords" : [],
-                        "Axes" : [],
-                        "Daggers" : ["Small", "Large", "Silver"],
-                        "Staffs" : ["Wooden", "Power", "Mage"],
-                        "Hammers" : [],
-                        "Nunchucks" : [],
-                        "Others" : ["Masmune"]},
-            }
+        self.canequip = [
+            armor("Armors","Cloth",1,-2),
+            armor("Bracelets","Copper",4,-1),
+            armor("Bracelets","Silver",15,-1),
+            armor("Bracelets","Gold",24,-1),
+            armor("Bracelets","Opal",36,-1),
+            armor("Shields","ProCape",8,-2),
+            armor("Helmets","Cap",1,-1),
+            armor("Helmets","Ribbon",1,-1),
+            armor("Gauntlets","Gloves",1,-1),
+            armor("Gauntlets","ProRing",8,-1),
+            weapon("Daggers","Small",5,10),
+            weapon("Daggers","Large",7,10),
+            weapon("Daggers","Silver",10,15),
+            weapon("Staffs","Wooden",6, 0),
+            weapon("Staffs","Power",12,0),
+            weapon("Staffs","Mage",12,10),
+            weapon("Others","Masmune",56,50)]
 class BlackWizard(BlackMage):
     def __init__(self):
         super().__init__()
         self.acro = "BW"
-        self.canequip["Armory"]["Armors"].append("Blck Shrt")
-        self.canequip["Weapons"]["Staffs"].append("Wizard")
-        self.canequip["Weapons"]["Others"].append("Catclaw")
+        self.canequip.append(armor("Armors","Blck Shrt",24,-2))
+        self.canequip.append(weapon("Staffs","Wizard",15,15))
+        self.canequip.append(weapon("Others","Catclaw",22,35))
 class RedMage(FFRclasses):
         def __init__(self):
             self.acro = "RM"
