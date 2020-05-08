@@ -117,7 +117,6 @@ class Knight(Fighter):
 class Thief(FFRclasses):
     def __init__(self):
         self.acro = "Th"
-
         self.canequip = [
             armor("Armors","Cloth",1,-2),
             armor("Armors","Wooden",4,-5),
@@ -166,22 +165,23 @@ class Ninja(Thief):
 class BlackBelt(FFRclasses):
     def __init__(self):
         self.acro = "BB"
-        self.canequip = {
-                        "Armory" : {
-                                    "Armors" : ["Cloth", "Wooden"],
-                                    "Bracelets": ["Copper", "Silver", "Gold", "Opal"],
-                                    "Shields" : [],
-                                    "Helmets" : ["Cap", "Ribbon"],
-                                    "Gauntlets" : ["Gloves", "ProRing"]
-                                    },
-                        "Weapons": {"Swords" : [],
-                                    "Axes" : [],
-                                    "Daggers" : [],
-                                    "Staffs" : ["Wooden", "Power"],
-                                    "Hammers" : [],
-                                    "Nunchucks" : ["Wooden", "Iron"],
-                                    "Others" : ["Masmune"]}
-                        }
+
+        self.canequip = [
+            armor("Armors","Cloth",1,-2),
+            armor("Armors","Wooden",4,-5),
+            armor("Bracelets","Copper",4,-1),
+            armor("Bracelets","Silver",15,-1),
+            armor("Bracelets","Gold",24,-1),
+            armor("Bracelets","Opal",36,-1),
+            armor("Helmets","Cap",1,-1),
+            armor("Helmets","Ribbon",1,-1),
+            weapon("Staffs","Wooden",6, 0),
+            weapon("Staffs","Power",12,0),
+            weapon("Nunchucks","Wooden",12,0),
+            weapon("Nunchucks","Iron",16,0),
+            weapon("Others","Masmune",56,50),
+            armor("Gauntlets","Gloves",1,-1),
+            armor("Gauntlets","ProRing",8,-1)]
 class Master(BlackBelt):
     def __init__(self):
         super().__init__()
