@@ -16,6 +16,13 @@ acrodicto = {"FI" : Fi, "KN" : Kn, "BB" : BB, "MA" : Ma, "TH" : Th, "NI" : Ni,
 
 
 def print_table(what, liste, listechar):
+    """Produces a string that represent the whole list along with
+        the characteristics of the classes in the team. Then print it.
+        Arguments:
+            what (str) = "Armory" or "Weapons"
+            liste (list) = uniform list of weapon or armor objects
+            listechar = list of FFRclasses in the team
+    """
     string = " " * 27 + "| A  | E  |"
     for char in listechar:
         string += f"{char.acro:^3}|"
@@ -32,7 +39,7 @@ def print_table(what, liste, listechar):
 if __name__ == "__main__":
     clear()
     # team = input("How many characters in your team? [1,2,3,4]")
-    team = int(input("How many team members? [1,2,3,4]"))
+    team = int(input("How many team members?"))
     print("Fi/Kn, BB/Ma, Th/Ni, RM/RW, WM/WW, BM/BW")
     listchar = []
     for _ in range(team):
