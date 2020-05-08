@@ -99,17 +99,21 @@ class Knight(Fighter):
         super().__init__()
         self.acro = "Kn"
         # Armors TODO
-        self.canequip["Armory"]["Armors"].append("Opal")
-        self.canequip["Armory"]["Armors"].append("Dragon")
-        self.canequip["Armory"]["Shields"].append("Opal")
-        self.canequip["Armory"]["Shields"].append("Aegis")
-        self.canequip["Armory"]["Helmets"].append("Heal")
-        self.canequip["Armory"]["Helmets"].append("Opal")
-        self.canequip["Armory"]["Gauntlets"].append("Zeus")
-        self.canequip["Armory"]["Gauntlets"].append("Opal")
-        self.canequip["Weapons"]["Swords"].append("Bane")
-        self.canequip["Weapons"]["Hammers"].append("Thor")
-        self.canequip["Weapons"]["Others"] = ["Rapier", "Scimtar", "Sabre", "Falchon","Vorpal", "Catclaw", "Defense","Xcalber", "Masmune"]
+        self.canequip.append(armor("Armors","Opal",42,-10))
+        self.canequip.append(armor("Armors","Dragon",42,-10))
+        self.canequip.append(armor("Shields","Opal",16,0))
+        self.canequip.append(armor("Shields","Aegis",16,0))
+        self.canequip.append(armor("Helmets","Heal",6,-3))
+        self.canequip.append(armor("Helmets","Opal",8,-3))
+        self.canequip.append(armor("Gauntlets","Zeus",6,-3))
+        self.canequip.append(armor("Gauntlets","Opal",8,-3))
+        self.canequip.append(weapon("Swords","Bane",22,20))
+        self.canequip.append(weapon("Hammers","Thor",18,15))
+        self.canequip.append(weapon("Others","Vorpal",24,25))
+        self.canequip.append(weapon("Others","Catclaw",22,35))
+        self.canequip.append(weapon("Others","Defense",30,35))
+        self.canequip.append(weapon("Others","Xcalber",45,35))
+
 
 class Thief(FFRclasses):
     def __init__(self):
