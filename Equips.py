@@ -101,8 +101,10 @@ listweapons = [
     weapon("Hammers","Iron",9,0),
     weapon("Hammers","Silver",12,5),
     weapon("Hammers","Thor",18,15),
+    
     weapon("Nunchucks","Wooden",12,0),
     weapon("Nunchucks","Iron",16,0),
+
     weapon("Others","Rapier",9,5),
     weapon("Others","Scimtar",10,10),
     weapon("Others","Sabre",13,5),
