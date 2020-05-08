@@ -1,26 +1,27 @@
-class armor:
-    def __init__(self,cat, name, A, E):
+class equipableitem:
+    def __init__(self, cat, name):
         self.cat = cat
         self.name = name
-        self.A = A
-        self.E = E
-    def __str__(self):
-        return f"{self.cat:<12}|{self.name:<10}|{str(self.A):^4}|{str(self.E):^4}|"
     def __lt__(self, other):
         if self.cat != other.cat : return self.cat < other.cat
         else: return self.name < other.name
 
-class weapon:
+
+class armor(equipableitem):
+    def __init__(self,cat, name, A, E):
+        super().__init__(cat,name)
+        self.A = A
+        self.E = E
+    def __str__(self):
+        return f"{self.cat:<12}|{self.name:<10}|{str(self.A):^4}|{str(self.E):^4}|"
+
+class weapon(equipableitem):
     def __init__(self,cat, name, D, H):
-        self.cat = cat
-        self.name = name
+        super().__init__(cat,name)
         self.H = H
         self.D = D
     def __str__(self):
         return f"{self.cat:<12}|{self.name:<10}|{str(self.D):^4}|{str(self.H):^4}|"
-    def __lt__(self, other):
-        if self.cat != other.cat : return self.cat < other.cat
-        else: return self.name < other.name
 
 listarmors = [
     armor("Armors","Cloth",1,-2),
@@ -116,6 +117,15 @@ listweapons = [
 
 
 def updateliste(liste,what, characters):
+    """ Function that take a list of armor or weapon and a list of characters
+        and returns an updated list that removes items that can't be equiped by 
+        the whole team.
+
+        Arguments:
+            liste (list) : uniform List of weapons or armors to be updated.
+            what (str) : "Armory" or "Weapons"
+            characters (list) : List of the characters in the team
+    """
     listcan = []
     for item in liste :
         if any([i.checkequip(what, item.cat, item.name) for i in characters]):
