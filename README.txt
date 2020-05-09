@@ -12,6 +12,8 @@ Written by Niamek
     -> Their D-H are also displayed
 -> List armors only equippable by your team
     -> Their A-E are also displayed
+-> Support Ranks up
+-> List White spells
 
 ---------------DISCLAIMER------------------------------------------------------
 I'm not a very experienced programmer. I'll probably never develop an interface
@@ -30,10 +32,12 @@ in the SAME folder.
 
 At the current time, there are 4 files that needs to be in the folder:
     main.py => The program to run.
-    affichage.py => This containts stuffs related to the displays
-    classes.py => This contain the FF classes.
-    Equips.py => This contain the weapons and armors.
     README.txt => This file.
+
+    affichage.py => This contains stuffs related to the displays
+    FFclasses.py => This contain the FF classes.
+    Equips.py => This contain the weapons and armors.
+    spells.py => This contains infos related to spells
 
 Next, you need to open the command line IN THE FOLDER. Here is an easy way
 I found and use for windows 10.
