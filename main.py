@@ -20,7 +20,7 @@ acrodicto = {"FI" : Fi, "KN" : Kn, "BB" : BB, "MA" : Ma, "TH" : Th, "NI" : Ni,
 if __name__ == "__main__":
     clear()
     team = int(input("How many team members?"))
-    print("Fi/Kn, BB/Ma, Th/Ni, RM/RW, WM/WW, BM/BW")
+    print("Fi, BB, Th, RM, WM, BM")
 
     #listchar = [BB(), Kn(), Fi(), RM()]
     listchar = []
@@ -42,6 +42,9 @@ if __name__ == "__main__":
             print_table(listweapons, listchar)
         elif command == "LT":
             for i in listchar: print(i)
+        elif command == "RK":
+            for i, char in enumerate(listchar) : 
+                listchar[i] = char.rankup()
         elif command == "END":
             print("Script Stopped")
             gaming = None
