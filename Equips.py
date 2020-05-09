@@ -142,5 +142,5 @@ if __name__ == "__main__":
     #updated = updateliste(listarmors,team)
     #print(updated)
 
-    for i,item in enumerate(listweapons):
+    for i,item in enumerate(listarmors):
         print(i,item)
