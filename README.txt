@@ -64,3 +64,4 @@ http://mikesrpgcenter.com/
 More specifically, in 
 http://mikesrpgcenter.com/ffantasy/armor.html
 http://mikesrpgcenter.com/ffantasy/weapons.html
+http://mikesrpgcenter.com/ffantasy/whitemagic.html
