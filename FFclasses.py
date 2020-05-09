@@ -23,7 +23,6 @@ class FFRclasses:
 
     def checkequip(self,WA, string=False):
         if WA in self.canequip: 
-            print("allo")
             return "X"
         else : 
             if string: return "-"
@@ -188,42 +187,42 @@ class BlackWizard(BlackMage):
         self.canequip.append(listweapons[24])
         self.canequip.append(listweapons[35])
 class RedMage(FFRclasses):
-        def __init__(self):
-            self.acro = "RM"
-            self.canequp = [
-                listweapons[0],
-                listweapons[1],
-                listweapons[3],
-                listweapons[4],
-                listweapons[5],
-                listweapons[6],
-                listweapons[7],
-                listweapons[9],
-                listweapons[10],
-                listweapons[11],
-                listweapons[16],
-                listweapons[17],
-                listweapons[18],
-                listweapons[19],
-                listweapons[30],
-                listweapons[31],
-                listweapons[32],
-                listweapons[33],
-                listweapons[39],
-                listarmors[0],
-                listarmors[1],
-                listarmors[2],
-                listarmors[4],
-                listarmors[12],
-                listarmors[13],
-                listarmors[14],
-                listarmors[15],
-                listarmors[19],
-                listarmors[25],
-                listarmors[31],
-                listarmors[32],
-                listarmors[39]
-                            ]
+    def __init__(self):
+        self.acro = "RM"
+        self.canequip = [
+            listweapons[0],
+            listweapons[1],
+            listweapons[3],
+            listweapons[4],
+            listweapons[5],
+            listweapons[6],
+            listweapons[7],
+            listweapons[9],
+            listweapons[10],
+            listweapons[11],
+            listweapons[16],
+            listweapons[17],
+            listweapons[18],
+            listweapons[19],
+            listweapons[30],
+            listweapons[31],
+            listweapons[32],
+            listweapons[33],
+            listweapons[39],
+            listarmors[0],
+            listarmors[1],
+            listarmors[2],
+            listarmors[4],
+            listarmors[12],
+            listarmors[13],
+            listarmors[14],
+            listarmors[15],
+            listarmors[19],
+            listarmors[25],
+            listarmors[31],
+            listarmors[32],
+            listarmors[39]
+                        ]
 
 
 class RedWizard(RedMage):

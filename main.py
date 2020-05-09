@@ -19,19 +19,14 @@ acrodicto = {"FI" : Fi, "KN" : Kn, "BB" : BB, "MA" : Ma, "TH" : Th, "NI" : Ni,
 
 if __name__ == "__main__":
     clear()
-    #team = int(input("How many team members?"))
-    #print("Fi/Kn, BB/Ma, Th/Ni, RM/RW, WM/WW, BM/BW")
+    team = int(input("How many team members?"))
+    print("Fi/Kn, BB/Ma, Th/Ni, RM/RW, WM/WW, BM/BW")
 
-    listchar = [BB(), Th(), Fi(), RM()]
-    #listchar = []
-    #for _ in range(team):
-    #    listchar.append(acrodicto[input("What is your 1st class? ").upper()]())
+    #listchar = [BB(), Kn(), Fi(), RM()]
+    listchar = []
+    for _ in range(team):
+        listchar.append(acrodicto[input("What is your 1st class? ").upper()]())
     listarmors = updateliste(listarmors, listchar)
-    print(listarmors)
-    for i in listarmors: print("allo",i)
-
-
-
     listweapons = updateliste(listweapons, listchar)
 
     gaming = True
