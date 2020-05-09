@@ -13,7 +13,7 @@ Written by Niamek
 -> List armors only equippable by your team
     -> Their A-E are also displayed
 -> Support Ranks up
--> List White spells
+-> List spells
 
 ---------------DISCLAIMER------------------------------------------------------
 I'm not a very experienced programmer. I'll probably never develop an interface
@@ -64,4 +64,3 @@ http://mikesrpgcenter.com/
 More specifically, in 
 http://mikesrpgcenter.com/ffantasy/armor.html
 http://mikesrpgcenter.com/ffantasy/weapons.html
-http://mikesrpgcenter.com/ffantasy/whitemagic.html
