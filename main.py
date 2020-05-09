@@ -25,19 +25,23 @@ if __name__ == "__main__":
     #listchar = [BB(), Kn(), Fi(), RM()]
     listchar = []
     for _ in range(team):
-        listchar.append(acrodicto[input("What is your 1st class? ").upper()]())
+        listchar.append(acrodicto[input("What is the class? ").upper()]())
+    for i in listchar : print(i)
+
     listarmors = updateliste(listarmors, listchar)
     listweapons = updateliste(listweapons, listchar)
 
     gaming = True
     while gaming :
-        print("END = End the game, LA = List Armor, LW = List Weapons")
+        print("END = End the game, LA = List Armor, LW = List Weapons, LT = List Team")
         command = input("What would you like to do? ").upper()
         clear()
         if command == "LA":
             print_table(listarmors, listchar)
         elif command == "LW":
             print_table(listweapons, listchar)
+        elif command == "LT":
+            for i in listchar: print(i)
         elif command == "END":
             print("Script Stopped")
             gaming = None
