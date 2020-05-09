@@ -5,8 +5,6 @@ class spell:
         self.target = target
         self.effect = effect
     def __lt__(self, other):
-        #if self.acro[:-1] == other.acro[:-1] : return self.acro[:-1] < other.acro[:-1]
-        #return self.acro < other.acro
         return self.name < other.name
     def __str__(self):
         return f'{self.acro:^6}|{self.name:<14}|{self.target:<12}|{self.effect}'
@@ -17,7 +15,7 @@ ListWhites = [
     spell("Fog", "Fog", "Caster", "Armor +8"),
     spell("Ruse", "Ruse", "Caster", "Evade + 40%"),
     spell("Lamp", "Lamp", "1 ally", "Remove Dark status"),
-    spell("Mute", "Mute", "1 enemy", "??????"),
+    spell("Mute", "Mute", "1 enemy", "Prevents enemies from casting spells"),
     spell("Alit", "Anti-lighting", "Party", "Reduces lighting damage 25-50%"),
     spell("Invs", "Invisible", "1 ally", "Evade +20%"),
     spell("Cur2", "Cure 2", "1 ally", "Heal 32-64HP"),
@@ -41,8 +39,8 @@ ListWhites = [
     spell("Arub", "Anti Rub", "Party", "Protects from RUB spells"),
     spell("Hel3", "Heal 3", "Party", "Heal 48-96 HP"),
     spell("Fade", "Fade", "All enemies", "Damage enemies XX HP"),
-    spell("Wall", "Wall", "1 ally", "Protects from enemies' magic"),
-    spell("Xfer", "Xfer", "1 enemy", "?????"),
+    spell("Wall", "Wall", "1 ally", "Gives resistances to all elements"),
+    spell("Xfer", "Xfer", "1 enemy", "Eliminate Enemie's resistances"),
     spell("Lif2", "Life 2","1 ally", "Revives a slain ally (max HP)")]
 
 
