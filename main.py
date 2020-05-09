@@ -33,7 +33,7 @@ if __name__ == "__main__":
 
     gaming = True
     while gaming :
-        print("END = End the game, LA = List Armor, LW = List Weapons, LT = List Team")
+        print("END = End the game, LA = List Armor, LW = List Weapons, LT = List Team, RK = Rank up")
         command = input("What would you like to do? ").upper()
         clear()
         if command == "LA":
