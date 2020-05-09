@@ -20,8 +20,6 @@ def print_table(listWA, listechar):
     string += "\n" + ("-" * 38) + "----" * len(listechar)
     print(string)
 
-
-
 def print_spells(command):
     if command == "LSW":
         ListWhites.sort()

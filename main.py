@@ -26,10 +26,13 @@ if __name__ == "__main__":
 
     listarmors = updateliste(listarmors, listchar)
     listweapons = updateliste(listweapons, listchar)
+    listofcommands = "\nEND = End the scrpt\n\nLA = List Armor\nLSB = List Spells Black\nLSW = List Spells White\nLT = List Team\nLW = List Weapons\nRK = Rank up\n"
+
+
 
     gaming = True
     while gaming :
-        print("END = End the game, LA = List Armor, LW = List Weapons, LT = List Team, RK = Rank up, LSW = List Spells White, LSB = List Spells Black")
+        print(listofcommands)
         command = input("What would you like to do? ").upper()
         print(type(command))
         clear()

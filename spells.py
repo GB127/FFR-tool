@@ -81,7 +81,7 @@ ListBlacks = [
 
 
 if __name__ == "__main__":
-    #ListWhites.sort()
-    #for i in ListWhites: print(i)
+    ListWhites.sort()
+    for i in ListWhites: print(i)
     ListBlacks.sort()
     for i in ListBlacks: print(i)
