@@ -190,52 +190,52 @@ class BlackWizard(BlackMage):
 class RedMage(FFRclasses):
         def __init__(self):
             self.acro = "RM"
-
-            self.canequip = [
-                armor("Armors","Cloth",1,-2),
-                armor("Armors","Wooden",4,-5),
-                armor("Armors","Chain",15,-15),
-                armor("Armors","Silver",18,-8),
-                armor("Bracelets","Copper",4,-1),
-                armor("Bracelets","Silver",15,-1),
-                armor("Bracelets","Gold",24,-1),
-                armor("Bracelets","Opal",36,-1),
-                armor("Shields","Buckler",2,0),
-                armor("Helmets","Cap",1,-1),
-                armor("Helmets","Ribbon",1,-1),
-                armor("Gauntlets","Gloves",1,-1),
-                armor("Gauntlets","ProRing",8,-1),
-                weapon("Swords","Short",15,10),
-                weapon("Swords","Rune",18,15),
-                weapon("Swords","Dragon",19,15),
-                weapon("Swords","Coral",19,15),
-                weapon("Swords","Long",20,10),
-                weapon("Swords","Silver",23,15),
-                weapon("Swords","Giant",21,20),
-                weapon("Swords","Flame",26,20),
-                weapon("Swords","Ice",29,25),
-                weapon("Swords","Sun",32,30),
-                weapon("Daggers","Small",5,10),
-                weapon("Daggers","Large",7,10),
-                weapon("Daggers","Silver",10,15),
-                weapon("Staffs","Wooden",6, 0),
-                weapon("Others","Rapier",9,5),
-                weapon("Others","Scimtar",10,10),
-                weapon("Others","Sabre",13,5),
-                weapon("Others","Falchon",15,10),
-                weapon("Others","Masmune",56,50)]
+            self.canequp = [
+                listweapons[0],
+                listweapons[1],
+                listweapons[3],
+                listweapons[4],
+                listweapons[5],
+                listweapons[6],
+                listweapons[7],
+                listweapons[9],
+                listweapons[10],
+                listweapons[11],
+                listweapons[16],
+                listweapons[17],
+                listweapons[18],
+                listweapons[19],
+                listweapons[30],
+                listweapons[31],
+                listweapons[32],
+                listweapons[33],
+                listweapons[39],
+                listarmors[0],
+                listarmors[1],
+                listarmors[2],
+                listarmors[4],
+                listarmors[12],
+                listarmors[13],
+                listarmors[14],
+                listarmors[15],
+                listarmors[19],
+                listarmors[25],
+                listarmors[31],
+                listarmors[32],
+                listarmors[39]
+                            ]
 
 
 class RedWizard(RedMage):
     def __init__(self):
         super().__init__()
         self.acro = "RW"
-        self.canequip.append(armor("Shields","ProCape",8,-2))
-        self.canequip.append(armor("Gauntlets","Silver",6,-3))
-        self.canequip.append(armor("Gauntlets","Zeus",6,-3))
-        self.canequip.append(armor("Gauntlets","Power",6,-3))
-        self.canequip.append(weapon("Swords","Were",18,15))
-        self.canequip.append(weapon("Swords","Bane",22,20))
-        self.canequip.append(weapon("Others","Vorpal",24,25))
-        self.canequip.append(weapon("Others","Catclaw",22,35))
-        self.canequip.append(weapon("Others","Defense",30,35))
+        self.canequip.append(listarmors[24])
+        self.canequip.append(listarmors[35])
+        self.canequip.append(listarmors[36])
+        self.canequip.append(listarmors[37])
+        self.canequip.append(listweapons[2])
+        self.canequip.append(listweapons[8])
+        self.canequip.append(listweapons[34])
+        self.canequip.append(listweapons[35])
+        self.canequip.append(listweapons[36])
