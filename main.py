@@ -26,7 +26,6 @@ if __name__ == "__main__":
     listchar = []
     for _ in range(team):
         listchar.append(acrodicto[input("What is the class? ").upper()]())
-    for i in listchar : print(i)
 
     listarmors = updateliste(listarmors, listchar)
     listweapons = updateliste(listweapons, listchar)
