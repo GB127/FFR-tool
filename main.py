@@ -1,6 +1,6 @@
 from FFclasses import *
 from Equips import weapon, listweapons, armor, listarmors, updateliste  # this works
-from affichage import *
+from affichage import print_table
 import os
 
 
