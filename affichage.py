@@ -1,6 +1,5 @@
 from spells import spell, ListWhites, ListBlacks
 
-
 def print_table(listWA, listechar):
     """Produces a string that represent the whole list along with
         the characteristics of the classes in the team. Then print it.

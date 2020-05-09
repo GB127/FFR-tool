@@ -1,5 +1,5 @@
-from FFclasses import *
-from Equips import weapon, listweapons, armor, listarmors, updateliste  # this works
+from FFclasses import *  # This imports all classes infos.
+from Equips import weapon, listweapons, armor, listarmors, updateliste
 from affichage import print_table, print_spells
 import os
 
