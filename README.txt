@@ -3,8 +3,10 @@ For the game Final Fantasy of the NES.
 
 This is a script to list the armors and weapons that can be equiped by the classes
 
-Written by Niamek
+I wrote this to help myself in playing the randomizer since I didn't know anything
+about the game.
 
+Written by Niamek
 
 ---------------FEATURES--------------------------------------------------------
 -> Support any number of classes in your team
