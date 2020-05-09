@@ -1,6 +1,6 @@
 from FFclasses import *
 from Equips import weapon, listweapons, armor, listarmors, updateliste  # this works
-from affichage import print_table
+from affichage import print_table, print_spells
 import os
 
 
@@ -19,7 +19,7 @@ acrodicto = {"FI" : Fi, "KN" : Kn, "BB" : BB, "MA" : Ma, "TH" : Th, "NI" : Ni,
 
 if __name__ == "__main__":
     clear()
-    team = int(input("How many team members?"))
+    team = int(input("How many team members? "))
     print("Fi, BB, Th, RM, WM, BM")
 
     #listchar = [BB(), Kn(), Fi(), RM()]
@@ -33,8 +33,9 @@ if __name__ == "__main__":
 
     gaming = True
     while gaming :
-        print("END = End the game, LA = List Armor, LW = List Weapons, LT = List Team, RK = Rank up")
+        print("END = End the game, LA = List Armor, LW = List Weapons, LT = List Team, RK = Rank up, LSW = List Spells White, LSB = List Spells Black")
         command = input("What would you like to do? ").upper()
+        print(type(command))
         clear()
         if command == "LA":
             print_table(listarmors, listchar)
@@ -42,6 +43,8 @@ if __name__ == "__main__":
             print_table(listweapons, listchar)
         elif command == "LT":
             for i in listchar: print(i)
+        elif command in ("LSW","LSB"):
+            print_spells(command)
         elif command == "RK":
             for i, char in enumerate(listchar) : 
                 listchar[i] = char.rankup()

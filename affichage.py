@@ -1,3 +1,6 @@
+from spells import spell, ListWhites, ListBlacks
+
+
 def print_table(listWA, listechar):
     """Produces a string that represent the whole list along with
         the characteristics of the classes in the team. Then print it.
@@ -16,3 +19,13 @@ def print_table(listWA, listechar):
         string += f"\n{line}"
     string += "\n" + ("-" * 38) + "----" * len(listechar)
     print(string)
+
+
+
+def print_spells(command):
+    if command == "LSW":
+        ListWhites.sort()
+        for sp in ListWhites : print(sp)
+    if command == "LSB":
+        ListBlacks.sort()
+        for sp in ListBlacks : print(sp)
