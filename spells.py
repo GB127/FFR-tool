@@ -45,80 +45,43 @@ ListWhites = [
 
 
 
-ListBlacks = []
-"""
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-spell(
-
-
-
-
-
-
-
-]"""
+ListBlacks = [
+    spell("Fire", "Fire", "1 enemy", "Fire damage 10-40 HP"),
+    spell("Slep", "Sleep", "1 enemy", "Sleep"),
+    spell("Lock", "Lock", "1 enemy", "Enemy's evade -10%"),
+    spell("Lit", "Lighting", "1 enemy", "Lighting damage 10-40 HP"),
+    spell("Ice", "Ice", "1 enemy", "Ice damage 20-80 HP"),
+    spell("Dark", "Dark", "All enemies", "Dark"),
+    spell("Tmpr", "Temper", "1 ally", "Hit + 14"),
+    spell("Slow", "Slow", "All enemies", "Reduce Hit number"),
+    spell("Fir2", "Fire 2", "All enemies", "Fire damage 30-120 HP"),
+    spell("Hold", "Hold", "1 enemy", "Paralysis"),
+    spell("Lit2", "Lighting 2", "All enemies", "Lighting damage XX HP"),
+    spell("Lok2", "Lock 2", "All enemies", "enemies' evade -10%"),
+    spell("Slp2", "Sleep 2", "1 enemy", "Sleep"),
+    spell("Fast", "Fast", "1 ally", "Increase Number of hits"),
+    spell("Conf", "Confuse", "All enemies", "Confuses the enemies"),
+    spell("Ice2", "Ice 2", "All enemies", "Ice damage 40-160 HP"),
+    spell("Fir3", "Fire 3", "All enemies", "Fire damage 50-200 HP"),
+    spell("Bane", "Bane", "All enemies", "Poison/stone KO"),
+    spell("Warp", "Warp", "Party", "Warp to previous level of dungeon"),
+    spell("Slo2", "Slow 2", "1 enemy", "Slow"),
+    spell("Lit3", "Lighting 3", "All enemies", "Lighting damage 60-240 HP"),
+    spell("Rub", "Rub", "1 enemy", "Death KO"),
+    spell("Qake", "Quake", "all enemies", "Earth KO"),
+    spell("Stun", "Stun", "1 enemy", "Stun if <300 HP"),
+    spell("Ice3", "Ice 3", "All enemies", "Ice damage 70-280 HP"),
+    spell("Brak", "Break", "1 enemy", "Stone an enemy"),
+    spell("Sabr", "Sabre", "caster", "Hit +40% & D +15%"),
+    spell("Blnd", "Blind", "1 Enemy", "Dark status"),
+    spell("Stop", "Stop", "All enemies", "Paralyse"),
+    spell("Zap!", "Zap!","All enemies", "Time KO"),
+    spell("XXXX", "XXXX","All enemies", "Death KO if <300 HP"),
+    spell("Nuke", "Nuke", "All enemies", "Big damage")]
 
 
 if __name__ == "__main__":
-    ListWhites.sort()
-    for i in ListWhites: print(i)
+    #ListWhites.sort()
+    #for i in ListWhites: print(i)
+    ListBlacks.sort()
+    for i in ListBlacks: print(i)

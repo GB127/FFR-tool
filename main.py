@@ -14,9 +14,6 @@ acrodicto = {"FI" : Fi, "KN" : Kn, "BB" : BB, "MA" : Ma, "TH" : Th, "NI" : Ni,
 
 
 
-
-
-
 if __name__ == "__main__":
     clear()
     team = int(input("How many team members? "))
