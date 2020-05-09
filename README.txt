@@ -58,7 +58,7 @@ https://repl.it/languages/python3
 Note that I'm a new coder, so codes aren't the best yet. I always plan to
 improve the code when I have an idea.
 -----------------------------------------------------------------------------
-The infos I used to write this script comes from
+Some infos I used to write this script comes from
 http://mikesrpgcenter.com/
 
 More specifically, in 
