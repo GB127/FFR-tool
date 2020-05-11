@@ -8,7 +8,11 @@ def print_items(command,listekeys):
         for ite in ListItems: print(ite)
     if command == "KI":
         listekeys.sort()
-        for ite in listekeys: print(ite)
+        for no, ite in enumerate(listekeys):
+            line = f'{str(no):<2}  ' + str(ite)
+            print(line)
+        
+
 
 def print_table(listWA, listechar):
     """Produces a string that represent the whole list along with

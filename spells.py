@@ -98,6 +98,11 @@ class KeyItem(item):
         if self.used:
             string = "X"
         return f'{string:}|{self.name:<8}|{self.effect}'
+    def founduse(self):
+        if not self.found : self.found = True
+        elif self.found and not self.used: self.used == True
+        else : pass
+
 
 ListKeyItems = [
     KeyItem("Adamant", "Get an item in Dward Cave"),
