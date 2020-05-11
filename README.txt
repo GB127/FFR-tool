@@ -16,6 +16,8 @@ Written by Niamek
     -> Their A-E are also displayed
 -> Support Ranks up
 -> List spells
+-> List items
+-> List Key Items
 
 ---------------DISCLAIMER------------------------------------------------------
 I'm not a very experienced programmer. I'll probably never develop an interface

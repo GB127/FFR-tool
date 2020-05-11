@@ -27,7 +27,7 @@ if __name__ == "__main__":
 
     listarmors = updateliste(listarmors, listchar)
     listweapons = updateliste(listweapons, listchar)
-    listofcommands = "\nEND = End the scrpt\n\nLA = List Armor\nLI = List Items\nLSB = List Spells Black\nLSW = List Spells White\nLT = List Team\nLW = List Weapons\nRK = Rank up\n"
+    listofcommands = "\nEND = End the scrpt\n\nKI = Key Items\nLA = List Armor\nLI = List Items\nLSB = List Spells Black\nLSW = List Spells White\nLT = List Team\nLW = List Weapons\nRK = Rank up\n"
 
 
     gaming = True
