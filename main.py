@@ -1,6 +1,7 @@
 from FFclasses import *  # This imports all classes infos.
 from Equips import weapon, listweapons, armor, listarmors, updateliste
-from affichage import print_table, print_spells
+from affichage import print_table, print_spells, print_items
+from spells import ListKeyItems
 import os
 
 
@@ -26,8 +27,7 @@ if __name__ == "__main__":
 
     listarmors = updateliste(listarmors, listchar)
     listweapons = updateliste(listweapons, listchar)
-    listofcommands = "\nEND = End the scrpt\n\nLA = List Armor\nLSB = List Spells Black\nLSW = List Spells White\nLT = List Team\nLW = List Weapons\nRK = Rank up\n"
-
+    listofcommands = "\nEND = End the scrpt\n\nLA = List Armor\nLI = List Items\nLSB = List Spells Black\nLSW = List Spells White\nLT = List Team\nLW = List Weapons\nRK = Rank up\n"
 
 
     gaming = True
@@ -47,6 +47,8 @@ if __name__ == "__main__":
         elif command == "RK":
             for i, char in enumerate(listchar) : 
                 listchar[i] = char.rankup()
+        elif command in ("LI", "KI"):
+            print_items(command, ListKeyItems)
         elif command == "END":
             print("Script Stopped")
             gaming = None

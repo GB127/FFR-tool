@@ -1,4 +1,14 @@
-from spells import spell, ListWhites, ListBlacks
+from spells import spell, ListWhites, ListBlacks, item, ListItems, ListKeyItems, ListKeyItems
+
+
+
+def print_items(command,listekeys):
+    if command == "LI":
+        ListItems.sort()
+        for ite in ListItems: print(ite)
+    if command == "KI":
+        listekeys.sort()
+        for ite in listekeys: print(ite)
 
 def print_table(listWA, listechar):
     """Produces a string that represent the whole list along with

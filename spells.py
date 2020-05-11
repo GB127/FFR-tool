@@ -43,8 +43,6 @@ ListWhites = [
     spell("Xfer", "Xfer", "1 enemy", "Eliminate Enemie's resistances"),
     spell("Lif2", "Life 2","1 ally", "Revives a slain ally (max HP)")]
 
-
-
 ListBlacks = [
     spell("Fire", "Fire", "1 enemy", "Fire damage 10-40 HP"),
     spell("Slep", "Sleep", "1 enemy", "Sleep"),
@@ -78,6 +76,55 @@ ListBlacks = [
     spell("Zap!", "Zap!","All enemies", "Time KO"),
     spell("XXXX", "XXXX","All enemies", "Death KO if <300 HP"),
     spell("Nuke", "Nuke", "All enemies", "Big damage")]
+
+class item:
+    def __init__(self, name, effect):
+        self.name = name
+        self.effect = effect
+    def __str__(self):
+        return f'{self.name:<6}|{self.effect}'
+    def __lt__(self,other):
+        return self.name < other.name
+
+class KeyItem(item):
+    def __init__(self,name, effect):
+        super().__init__(name, effect)
+        self.found = None
+        self.used = None
+    def __str__(self):
+        string = ""
+        if self.found:
+            string = "O"
+        if self.used:
+            string = "X"
+        return f'{string:}|{self.name:<8}|{self.effect}'
+
+ListKeyItems = [
+    KeyItem("Adamant", "Get an item in Dward Cave"),
+    KeyItem("Bottle", "Get an item in Gaia"),
+    KeyItem("Chime", "Open Mirage Tower"),
+    KeyItem("Crown", "Open Astos Boss"),
+    KeyItem("Cube", "Open Floating Castle"),
+    KeyItem("Crystal", "Get an item in Matoya's cave"),
+    KeyItem("Floater", "Raise the Airship in Crscent Lake"),
+    KeyItem("Herb", "Get an item in Elfland Castle"),
+    KeyItem("Key", "Mystic key that open some doors"),
+    KeyItem("Lute", "Open Temple of Fiends"),
+    KeyItem("Oxyale", "Open Sea Shrine in Gaia"),
+    KeyItem("Rod", "Open Bottom part of Earth Cave"),
+    KeyItem("Ruby", "Open Titan's Tunnel"),
+    KeyItem("Slab", "Larn Lefeinish in Melmond, Get an item in Leifen"),
+    KeyItem("Tail", "Rank up in Cardia Caves"),
+    KeyItem("TNT", "Open Dwarf Caves + Open canal")]   
+
+ListItems = [
+    item("Heal", "Heal 1 ally 30 HP"),
+    item("Pure", "Cure poison"),
+    item("Soft", "Cure stone"),
+    item("Tent", "Heal party HP + save"),
+    item("Cabin", "Heal party HP + save"),
+    item("House", "Heal party HP + save")]
+
 
 
 if __name__ == "__main__":
