@@ -22,13 +22,13 @@ def getitem(team, listtouse, which):
 
 if __name__ == "__main__":
     clear()
-    #team = int(input("How many team members? "))
-    #print("Fi, BB, Th, RM, WM, BM")
+    team = int(input("How many team members? "))
+    print("Fi, BB, Th, RM, WM, BM")
 
-    listchar = [BB(), Fi(), RM()]
-    #listchar = []
-    #for _ in range(team):
-    #    listchar.append(acrodicto[input("What is the class? ").upper()]())
+    # listchar = [BB(), Fi(), RM()]
+    listchar = []
+    for _ in range(team):
+        listchar.append(acrodicto[input("What is the class? ").upper()]())
     currentlist = None
     listarmors = updateliste(listarmors, listchar)
     listweapons = updateliste(listweapons, listchar)

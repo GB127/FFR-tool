@@ -102,8 +102,7 @@ class KeyItem(item):
         if self.found is None :
             self.found = True
         elif self.found is True :
-            self.used = True  # This doesn't work
-        print(self.used)
+            self.used = True
 
 
 ListKeyItems = [

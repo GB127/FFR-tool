@@ -18,6 +18,7 @@ Written by Niamek
 -> List spells
 -> List items
 -> List Key Items
+    -> Can also track which you have
 
 ---------------DISCLAIMER------------------------------------------------------
 I'm not a very experienced programmer. I'll probably never develop an interface
