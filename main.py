@@ -39,8 +39,8 @@ if __name__ == "__main__":
         listchar.append(acrodicto[input("What is the class? ").upper()]())
 
     currentlist = None
-    listarmors = updateliste(listarmors, listchar)
-    listweapons = updateliste(listweapons, listchar)
+    listarmors2 = updateliste(listarmors, listchar)
+    listweapons2 = updateliste(listweapons, listchar)
 
     print_help()
 
@@ -55,11 +55,11 @@ if __name__ == "__main__":
         if command == "HELP":
             print_help()
         elif command == "LA":
-            print_table(listarmors, listchar)
-            currentlist = listarmors
+            print_table(listarmors2, listchar)
+            currentlist = listarmors2
         elif command == "LW":
-            print_table(listweapons, listchar)
-            currentlist = listweapons
+            print_table(listweapons2, listchar)
+            currentlist = listweapons2
         elif command == "LT":
             for i in listchar: print(i)
             currentlist = None
@@ -69,6 +69,8 @@ if __name__ == "__main__":
         elif command == "RK":
             for i, char in enumerate(listchar) : 
                 listchar[i] = char.rankup()
+            listarmors2 = updateliste(listarmors, listchar)
+            listweapons2 = updateliste(listweapons, listchar)
             currentlist = None
         elif command in ("LI", "KI"):
             print_items(command, ListKeyItems)
