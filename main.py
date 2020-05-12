@@ -63,7 +63,7 @@ if __name__ == "__main__":
             currentlist = None
         elif command in ("LI", "KI"):
             print_items(command, ListKeyItems)
-            currentlist = ListKeyItems
+            if command == "KI" : currentlist = ListKeyItems
         else:
             try: int(command)
             except ValueError:
