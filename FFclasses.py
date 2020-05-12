@@ -19,9 +19,9 @@ class FFRclasses:
     """
     def __init__(self):
         self.equiped = {"Weapon" : weapon("Unarmed", "Unarmed", 0,0),
-                        "Helmet" : armor("Helmets", "Hairs", 0,0),
-                        "Shield" : armor("Shields", "Elbow", 0,0),
-                        "Armor" : armor("Armors", "Skin", 0,0),
+                        "Helmets" : armor("Helmets", "Hairs", 0,0),
+                        "Shields" : armor("Shields", "Elbow", 0,0),
+                        "Armors" : armor("Armors", "Skin", 0,0),
                         "Gauntlets": armor("Gauntlets", "Hands", 0,0),
                         "Bracelets" : armor("Bracelets", "Wrists", 0,0)}
     def __str__(self):
@@ -35,6 +35,11 @@ class FFRclasses:
         else : 
             if string: return "-"
             return False
+    def equip(self,WA):
+        if isinstance(WA, weapon):
+            self.equiped["Weapon"] = WA  # This works
+        if isinstance(WA, armor):
+            self.equiped[WA.cat] = WA
 
 class Fighter(FFRclasses):
     def __init__(self):
@@ -317,3 +322,11 @@ class RedWizard(RedMage):
         self.canequip.append(listweapons[35])
         self.canequip.append(listweapons[36])
         self.equiped = equipment
+
+
+
+if __name__ == "__main__":
+    test = BlackBelt()
+    print(test)
+    test.equip(armor("Armors", "Thor", 4,4))
+    print(test)
