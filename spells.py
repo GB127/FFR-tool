@@ -97,11 +97,10 @@ class KeyItem(item):
             string = "O"
         if self.used:
             string = "X"
-        return f'{string:}|{self.name:<8}|{self.effect}'
+        return f'|{string:^3}|{self.name:<8}|{self.effect}'
     def founduse(self):
         if not self.found : self.found = True
-        elif self.found and not self.used: self.used == True
-        else : pass
+        elif self.found : self.used == True
 
 
 ListKeyItems = [

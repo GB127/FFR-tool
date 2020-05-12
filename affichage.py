@@ -3,15 +3,19 @@ from spells import spell, ListWhites, ListBlacks, item, ListItems, ListKeyItems,
 
 
 def print_items(command,listekeys):
+    string = "-" * 27 + "\n"
     if command == "LI":
+        string += "List of Items\n" + "-" * 27 + "\n"
         ListItems.sort()
-        for ite in ListItems: print(ite)
+        for ite in ListItems: 
+            string += str(ite) + "\n"
+        print(string)
     if command == "KI":
+        string += "List of Key Items\n" + "-" * 27 + "\n"
         listekeys.sort()
         for no, ite in enumerate(listekeys):
-            line = f'{str(no):<2}  ' + str(ite)
-            print(line)
-        
+            string += f'{str(no):<3}' + str(ite) + "\n"
+        print(string)        
 
 
 def print_table(listWA, listechar):
