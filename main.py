@@ -13,15 +13,20 @@ acrodicto = {"FI" : Fi, "KN" : Kn, "BB" : BB, "MA" : Ma, "TH" : Th, "NI" : Ni,
              "RM" : RM, "RW" : RW, "WM" : WM, "WW" : WW, "BM" : BM, "BW" : BW}
 
 def getitem(team, listtouse, which):
-    itemused = listtouse[which]
-    if isinstance(itemused, (weapon, armor)):
-        print("Weapon/Armor to be equiped:")
-        print(itemused)
-        print("\nTeam")
-        for no,i in enumerate(team) : print(no, " ", i.__class__.__name__)
-        team[int(input("Who? [#]"))].equip(itemused)
-    elif isinstance(itemused, KeyItem):
-        itemused.founduse()
+    try:
+        itemused = listtouse[which]
+    except IndexError:
+        print("Number entereed not in list")
+        return
+    else:
+        if isinstance(itemused, (weapon, armor)):
+            print("Weapon/Armor to be equiped:")
+            print(itemused)
+            print("\nTeam")
+            for no,i in enumerate(team) : print(no, " ", i.__class__.__name__)
+            team[int(input("Who? [#]"))].equip(itemused)
+        elif isinstance(itemused, KeyItem):
+            itemused.founduse()
 
 if __name__ == "__main__":
     clear()
