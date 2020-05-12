@@ -24,6 +24,7 @@ class FFRclasses:
                         "Armors" : armor("Armors", "Skin", 0,0),
                         "Gauntlets": armor("Gauntlets", "Hands", 0,0),
                         "Bracelets" : armor("Bracelets", "Wrists", 0,0)}
+        self.canequip = {}
     def __str__(self):
         string = f'{self.__class__.__name__}\n' + "-" * 35 + "\n"
         for i in self.equiped.keys():
@@ -36,6 +37,9 @@ class FFRclasses:
             if string: return "-"
             return False
     def equip(self,WA):
+        if WA not in self.canequip :
+            print("The item is not equipable")
+            return
         if isinstance(WA, weapon):
             self.equiped["Weapon"] = WA  # This works
         if isinstance(WA, armor):
