@@ -10,18 +10,22 @@ class equipableitem:
 class armor(equipableitem):
     def __init__(self,cat, name, A, E):
         super().__init__(cat,name)
-        self.A = A
-        self.E = E
+        self.A = A  # Absorb hits
+        self.E = E  # Evasions (Always negative)
     def __str__(self):
         return f"{self.cat:<12}|{self.name:<10}|{str(self.A):^4}|{str(self.E):^4}|"
+    def isbetter(self,other):
+        return any([self.A > other.A])
 
 class weapon(equipableitem):
     def __init__(self,cat, name, D, H):
         super().__init__(cat,name)
-        self.H = H
-        self.D = D
+        self.H = H  # Hit rate
+        self.D = D  # Damage
     def __str__(self):
         return f"{self.cat:<12}|{self.name:<10}|{str(self.D):^4}|{str(self.H):^4}|"
+    def isbetter(self,other):
+        return any([self.H > other.H, self.D > other.D])
 
 listarmors = [
     armor("Armors","Cloth",1,-2),
@@ -137,10 +141,8 @@ def updateliste(listWA,characters):  # Ok
 
 
 if __name__ == "__main__":
-    #from FFclasses import BlackBelt
-    #team = [BlackBelt()]
-    #updated = updateliste(listarmors,team)
-    #print(updated)
+    test = armor("Axe", "Prune", 5,5)
+    test2 = armor("Axe", "Orange",7,5)
+    test3 = armor("Axe", "Prune", 3,7)
 
-    for i,item in enumerate(listarmors):
-        print(i,item)
+    print(test3.isbetter(test))

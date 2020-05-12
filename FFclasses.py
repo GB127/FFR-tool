@@ -31,8 +31,16 @@ class FFRclasses:
             string += f'{str(self.equiped[i])}\n'
         return string
     def checkequip(self,WA, string=False):
-        if WA in self.canequip: 
-            return "X"
+        if WA in self.canequip:
+            if isinstance(WA,weapon) and WA.isbetter(self.equiped["Weapon"]):
+                if string : return "X"
+                return True
+            elif isinstance(WA,armor) and WA.isbetter(self.equiped[WA.cat]):
+                if string : return "X"
+                return True
+            else:
+                if string: return "-"
+                return False
         else : 
             if string: return "-"
             return False

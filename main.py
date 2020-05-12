@@ -72,7 +72,11 @@ if __name__ == "__main__":
             try: int(command)
             except ValueError:
                 pass
-            else: getitem(listchar, currentlist, int(command))
+            else:
+                getitem(listchar, currentlist, int(command))
+                listarmors = updateliste(listarmors, listchar)
+                listweapons = updateliste(listweapons, listchar)
+
 
 
 
