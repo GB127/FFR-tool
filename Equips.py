@@ -140,6 +140,8 @@ def updateliste(listWA,characters):  # Ok
     return listcan
 
 
+
+
 if __name__ == "__main__":
     test = armor("Axe", "Prune", 5,5)
     test2 = armor("Axe", "Orange",7,5)

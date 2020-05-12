@@ -53,12 +53,20 @@ def print_table(listWA, listechar):
     print(string)
 
 def print_spells(command):
+    string = "-" * 27 + "\n"
     if command == "LSW":
+        string += "List of White Spells\n" + "-" * 27 + "\n"
         ListWhites.sort()
-        for sp in ListWhites : print(sp)
-    if command == "LSB":
+        for sp in ListWhites :
+            string += str(sp) + "\n"
+        print(string)
+    elif command == "LSB":
+        string += "List of Black Spells\n" + "-" * 27 + "\n"
         ListBlacks.sort()
-        for sp in ListBlacks : print(sp)
+        for sp in ListBlacks :
+            string += str(sp) + "\n"
+        print(string)
+
 
 
 if __name__ == "__main__":
