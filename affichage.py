@@ -1,5 +1,8 @@
 from spells import spell, ListWhites, ListBlacks, item, ListItems, ListKeyItems
 
+def print_help():
+    listofcommands = "\nEND = End the scrpt\n\nKI = Key Items\nLA = List Armor\nLI = List Items\nLSB = List Spells Black\nLSW = List Spells White\nLT = List Team\nLW = List Weapons\nRK = Rank up\n"
+    print(listofcommands)
 
 
 def print_items(command,listekeys):

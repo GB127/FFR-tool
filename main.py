@@ -1,6 +1,6 @@
 from FFclasses import *  # This imports all classes infos.
 from Equips import weapon, listweapons, armor, listarmors, updateliste
-from affichage import print_table, print_spells, print_items
+from affichage import print_table, print_spells, print_items, print_help
 from spells import KeyItem, ListKeyItems
 import os
 
@@ -32,22 +32,23 @@ if __name__ == "__main__":
     listchar = []
     for _ in range(team):
         listchar.append(acrodicto[input("What is the class? ").upper()]())
+
     currentlist = None
     listarmors = updateliste(listarmors, listchar)
     listweapons = updateliste(listweapons, listchar)
-    listofcommands = "\nEND = End the scrpt\n\nKI = Key Items\nLA = List Armor\nLI = List Items\nLSB = List Spells Black\nLSW = List Spells White\nLT = List Team\nLW = List Weapons\nRK = Rank up\n"
-    print(listofcommands)
+
+    print_help()
+
 
     gaming = True
     while gaming :
         command = input("What would you like to do? ").upper()
-        print(type(command))
         clear()
         if command == "END":
             print("Script Stopped")
             gaming = None
         if command == "HELP":
-            print(listofcommands)
+            print_help()
         elif command == "LA":
             print_table(listarmors, listchar)
             currentlist = listarmors
