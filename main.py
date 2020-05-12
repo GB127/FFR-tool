@@ -2,7 +2,6 @@ from FFclasses import *  # This imports all classes infos.
 from Equips import weapon, listweapons, armor, listarmors, updateliste
 from affichage import print_table, print_spells, print_items
 from spells import KeyItem, ListKeyItems
-import re
 import os
 
 clear = lambda: os.system('cls')
@@ -19,8 +18,8 @@ def getitem(team, listtouse, which):
         print("Weapon/Armor to be equiped:")
         print(itemused)
         print("\nTeam")
-        for no,i in enumerate(team) : print(no," ", i.__class__.__name__)
-        team[int(input("Who?"))].equip(itemused)
+        for no,i in enumerate(team) : print(no, " ", i.__class__.__name__)
+        team[int(input("Who? [#]"))].equip(itemused)
     elif isinstance(itemused, KeyItem):
         itemused.founduse()
 
